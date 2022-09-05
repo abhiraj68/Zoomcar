@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <title>Partner Page</title>
+    <link rel="icon" type="image/x-icon" href="images/zoom logo.png">
+    <style>
+        *, :after, :before {
+    box-sizing: inherit;
+}
+        body{
+    background: #fff;
+    color: #383838;
+   
+    -webkit-tap-highlight-color: transparent;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+        }
+        .zoom-layout {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 100%;
+    position: relative;
+}
+.component-zoom-toolbar {
+    background-color: #000;
+    box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 1px 10px 0 rgb(0 0 0 / 12%), 0 4px 5px 0 rgb(0 0 0 / 14%);
+    color: #fff;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.component-zoom-toolbar .toolbar-container {
+    min-height: 57px;
+}
+ .toolbar-container {
+    padding: 4px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    margin: auto;
+    width: 100%;
+    max-width: 1110px;
+}
+.header-icons {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin-left: 16px;
+}
+
+.component-zoom-toolbar .logo {
+    margin-left: 16px;
+    display: flex;
+    align-items: flex-start;
+    font-size: 18px;
+    font-weight: 600;
+    flex-direction: column;
+    color: #fff;
+}
+.component-zoom-toolbar .zapLogo {
+    height: 48px;
+}
+ .toolbar-top-icons {
+    display: flex;
+    align-items: center;
+}
+.toolbar-top-icons a{
+    font-family: IBM Plex Sans;
+    font-size: 14px;
+    line-height: 1.43;
+    letter-spacing: .24px;
+    color: #fff;
+    padding-right: 16px;
+}
+
+.header-button {
+    margin: 0;
+    padding: 8px 16px!important;
+    background-color: #10a310;
+    border-radius: 4px;
+}
+
+.zoom-home {
+    width: 1100px;
+    margin: 0 auto;
+}
+.zoom-home {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 100%;
+}
+
+.zoom-home__section--start-earning {
+    padding: 54px 0 71px 80px;
+    min-height: 332px;
+    border-radius: 12px;
+}
+.zoom-home__section--start-earning {
+    padding: 32px 24px;
+    margin: 0 0 32px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.zoom-home__heading--start-earning {
+    font-family: IBM Plex Sans;
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1.29;
+    color: #fff;
+    margin-bottom: 12px;
+}
+.zoom-home__heading--start-earning {
+    
+    margin: 0;
+}
+
+element.style {
+}
+
+.zoom-home__heading--start-earning {
+    font-family: IBM Plex Sans;
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1.29;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.zoom-home__heading--start-earning {
+   
+    margin: 0;
+}
+*, :after, :before {
+    box-sizing: inherit;
+}
+user agent stylesheet
+h5 {
+    display: block;
+    font-size: 0.83em;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+.zoom-home__text--start-earning {
+    font-family: IBM Plex Sans;
+    font-size: 14px;
+    line-height: 1.43;
+    letter-spacing: .24px;
+    color: #fff;
+    margin: 4px 0 20px;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.zoom-home__btn--start-earning {
+    font-family: IBM Plex Sans;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.14;
+    letter-spacing: .8px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 16px 20px;
+    border-radius: 4px;
+    background-color: #10a310;
+    display: block;
+    border: none;
+}
+.story {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.story .story__pause-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.story .story__pause-overlay i {
+    font-size: 48px;
+    color: #e0e0e0;
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+  
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+  
+    -webkit-font-smoothing: antialiased;
+}
+.story .story__timeline {
+    position: absolute;
+    display: flex;
+    flex-grow: 0;
+    width: 100%;
+    
+    background: linear-gradient(180deg,rgba(0,0,0,.5),transparent);
+    z-index: 2;
+    padding: 0 2px 8px;
+}
+.story .story__slice {
+    background: #858585;
+    height: 3px;
+    border-radius: 3px;
+    margin: 8px 4px;
+    width: 100%;
+}
+.story__video-wrapper {
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+}
+
+.story__story-item {
+    height: 480px;
+    padding-top: 20px;
+
+
+}
+.story__story-item, .story__video-wrapper {
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+}
+
+
+.story .story__mute-unmute {
+    margin: 0 16px 32px 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 4px;
+    font-size: 32px;
+    color: #fff;
+    background-color: #a8a8a8;
+    border-radius: 50%;
+    
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    
+    -webkit-font-smoothing: antialiased;
+}
+.story .story__lower-gradient {
+    width: 100%;
+    
+    background: linear-gradient(0deg,rgba(0,0,0,.1),transparent);
+    z-index: 2;
+    height: 24px;
+}
+.zoom-home__picture--ev-luxury {
+    width: 100%;
+    margin: 32px 0 16px;
+}
+.zoom-home__img--ev-luxury {
+    width: 100%;
+}
+
+.zoom-home__article--earning-steps {
+    padding: 56px 40px 16px;
+}
+
+.zoom-home__heading--earning-steps {
+    margin: 0 0 32px;
+    font-family: IBM Plex Sans;
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1.29;
+    color: #1f1f1f;
+    text-align: center;
+}
+h5 {
+    display: block;
+    
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    
+}
+
+
+.zoom-home__article--stats {
+    padding: 32px 24px;}
+    .zoom-home__heading--stats {
+    font-family: IBM Plex Sans;
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1.29;
+    color: #1f1f1f;
+}
+.zoom-home__description--stats {
+    padding-top: 8px;
+    font-family: IBM Plex Sans;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: .24px;
+    color: #666;
+}
+.zoom-home__section--stats {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.zoom-home__section--stats {
+    display: grid;
+    margin: 32px 0 0;
+    grid-gap: 1px;
+    background-color: #e0e0e0;
+}
+zoom-home__div--stat-item {
+    border-right: 1px solid #e0e0e0;
+}
+.zoom-home__div--stat-item {
+    background-color: #fff;
+    padding: 8px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 132px;
+}
+
+.zoom-home__img--stat-item {
+    width: 48px;
+    height: auto;
+}
+.zoom-home__heading--stat-item {
+    font-family: IBM Plex Sans;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.33;
+    color: #1f1f1f;
+    padding: 16px 0 12px;
+}
+.zoom-home__description--stat-item {
+    font-family: IBM Plex Sans;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: .24px;
+    color: #a8a8a8;
+}
+
+.zoom-home__section--calculation {
+    padding: 24px 40px;
+}
+.zoom-home__heading--calculation {
+    font-family: IBM Plex Sans;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -.4px;
+    color: #1f1f1f;
+}
+.zoom-home__text--dropdown {
+    color: #10a310;
+}
+.zoom-home__text--calculation {
+    color: #10a310;
+}
+.zoom-home__text--min-earning {
+    font-family: IBM Plex Sans;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: .24px;
+    color: #1f1f1f;
+    margin: 0 0 24px;
+}
+.zoom-home__btn--calculation {
+    font-family: IBM Plex Sans;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.14;
+    letter-spacing: .8px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 16px 20px;
+    border-radius: 4px;
+    background-color: #10a310;
+    margin-bottom: 20px;
+    display: block;
+    border: none;
+}
+.zoom-home__link--calculation {
+    font-family: IBM Plex Sans;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: .4px;
+    color: #10a310;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.zoom-home__section--referral {
+    border-radius: 12px;
+    padding: 40px 60px 20px;
+}
+.zoom-home__section--referral {
+    position: relative;
+    display: grid;
+    background-image: linear-gradient(270deg,#444,#000);
+    grid-template-areas:
+        "referral-content referral-picture"
+        "referral-footer referral-footer";
+  
+}
+.zoom-home__div--referral {
+    display: flex;
+    flex-direction: column;
+    grid-area: referral-content;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.zoom-home__heading--referral {
+    font-size: 32px;
+    font-family: IBM Plex Sans;
+   
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: .24px;
+    color: #fff;
+    margin: 0;
+    white-space: normal;
+}
+.zoom-home__span--referral {
+    font-size: 18px;
+    font-family: IBM Plex Sans;
+   
+    line-height: 1.33;
+    letter-spacing: .4px;
+    color: #fff;
+    margin-bottom: 16px;
+
+}
+.zoom-home__button--referral {
+    font-family: IBM Plex Sans;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.14;
+    letter-spacing: .8px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 16px 20px;
+    border-radius: 4px;
+    background-color: #10a310;
+    border: none;
+}
+.zoom-home__content--referral {
+    font-size: 14px;
+    grid-area: referral-footer;
+    font-family: IBM Plex Sans;
+    
+    line-height: 1.33;
+    letter-spacing: .4px;
+    color: #fff;
+   
+    margin-top: 16px;
+}
+.zoom-home__picture--referral {
+    width: 360px;
+    grid-area: referral-picture;
+    
+    align-self: center;
+    justify-self: center;
+}
+.zoom-home__quick-share-links {
+    bottom: 40px;
+    right: 60px;
+    position: absolute;
+    display: flex;
+}
+.zoom-home__whatsaap-share-icon {
+    margin-right: 8px;
+}
+.zoom-home__other-share-icon {
+    width: 22px;
+}
+.zoom-home__picture--referral img {
+    width: 100%;
+}
+.zoom-home__article--earning-steps img{
+    
+width: 100%;
+}
+
+.zoom-home__section--rating {
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    padding: 32px 0;
+    margin: 40px 0 32px;
+ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.zoom-home__heading--rating {
+    font-family: IBM Plex Sans;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.33;
+    color: #1f1f1f;
+}
+
+
+
+.zoom-home__video--rating {
+    max-width: 940px;
+    width: 100%;
+    height: auto;
+}
+
+.zoom-home__video--desktop {
+    display: block;
+}
+
+
+.zoom-home__article--faqs {
+    grid-template-areas:
+        "heading wrapper"
+        ". wrapper";
+    padding: 40px 58px;
+    grid-template-columns: 1fr 2fr;
+    display: grid;
+}
+
+
+.zoom-home__heading--faqs {
+    margin-left: 16px;
+    font-family: IBM Plex Sans;
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1.29;
+    color: #1f1f1f;
+    margin: 0 0 20px;
+   
+    grid-area: heading;
+}
+
+.zoom-home__div--faqs {
+    grid-area: wrapper;
+}
+.zoom-home__section--faqs {
+    display: grid;
+    grid-template-areas:
+        "hr hr"
+        "question img"
+        "answer .";
+    grid-template-columns: 1fr 24px;
+}
+.zoom-home__text--question {
+    font-family: IBM Plex Sans;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: .24px;
+    color: #1f1f1f;
+    margin: 0 8px 0 0;
+    grid-area: question;
+}
+.zoom-home__show--image {
+    height: auto;
+    float: right;
+}
+
+
+.zoom-home__section--contact-us {
+    padding: 40px 0;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    align-items: center;
+}
+
+.zoom-home__heading--contact-us {
+    display: block;
+    margin: 0 0 0 16px;
+    font-family: IBM Plex Sans;
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1.29;
+    color: #1f1f1f;
+    flex: 0.5;
+}
+.image-card {
+    margin: 24px 0 16px;
+    padding: 16px 0 0 16px;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.zoom-home__image-card--contact-us {
+    flex: 1;
+}
+.image-card__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 16px;
+}
+.image-card__title {
+    margin-bottom: 8px;
+    font-family: IBM Plex Sans;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: .24px;
+    color: #1f1f1f;
+}
+.image-card__description {
+    font-family: IBM Plex Sans;
+    font-size: 14px;
+    line-height: 1.43;
+    letter-spacing: .24px;
+    color: #a8a8a8;
+    flex: 1;
+}
+.image-card__cta-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: stretch;
+    margin-top: 8px;
+}
+.image-card__cta {
+    font-family: IBM Plex Sans;
+    font-size: 14px;
+    line-height: 1.43;
+    
+    color: #10a310;
+    letter-spacing: .8px;
+    padding: 0;
+    text-align: left;
+    background-color: #fff;
+    border: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    outline: none;
+}
+.image-card__icon {
+    width: 112px;
+}
+
+.image-card__empty-div {
+    display: block;
+}
+.zoom-footer {
+    
+    display: grid;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.zoom-layout__footer {
+    margin: 0 auto!important;
+    max-width: 1110px;
+    width: 100%;
+}
+.zoom-footer__end-of-page {
+    padding: 48px 16px 24px;
+    background-color: #f5f5f5;
+    margin: 0;
+}
+.zoom-footer__hr {
+    background-color: #e0e0e0;
+    margin: 8px 0 4px;
+    width: 60px;
+    height: 2px;
+}
+.zoom-footer__button {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 12px 16px;
+}
+    </style>
+</head>
+<body>
+    <div style="height:100%">
+        <main class="zoom-layout"> 
+            <div class="component-zoom-toolbar">
+                <div class="toolbar-container">
+                    <span class>☰</span>
+                    <span class="header-icons">
+                        <span>
+                            <a href="#" class="logo router-link-active">
+                                <img src="https://www.zoomcar.com/zap/subscribe/build/7f1998e5f3e2ea1ad605b2203aef2ac5.svg" alt="logo" class="zaplogo"
+                                 >
+                            </a>
+                        </span>
+                    </span>
+                    <span class="toolbar-top-icons">
+                        <a >Contact Us</a>
+                        <a >FAQS</a>
+                        <a >Refer & Earn</a>
+                        <a class="black-bar">Logout</a>
+                        <a class="header-button">START EARNING</a>
+                    </span>
+                </div>
+            </div>
+            <main class="zoom-home">
+                <section class="zoom-home__section--start-earning" style="background-position-y: 100%; background-image: url(https://www.zoomcar.com/zap/subscribe/build/a2ff940380f1315a0c0aacefb766e858.jpg);" >
+                    <h5 class="zoom-home__heading--start-earning">
+                        Share your car and earn
+                    <br>
+                up to ₹ 50,000 per month
+                    <br>
+                 </h5>
+                 <p class="zoom-home__text--start-earning">
+                    7 seater cars get an additional joining bonus of ₹ 7500 on sign-up.
+                    <br>
+                    <br>
+                 </p>
+                 <button class="zoom-home__btn--start-earning">
+                    START EARNING
+                 </button>
+
+                </section>
+                <div class="story">
+                    
+                    <div class="story__timeline">
+                        <div class="story__slice">
+                            <div class="story__progress" style="width: 1606.08%;"></div>
+                        </div>
+                    </div>
+                    <div class="story__video-wrapper">
+                        <video   poster="https://www.zoomcar.com/zap/subscribe/build/b5c19bd207922df056590ca18550c599.jpg" 
+                        disablepictureinpicture="true" preload="auto" class="story__story-item" controls autoplay muted >
+                        <source src="https://www.zoomcar.com/zap/subscribe/build/64440836bb2a2ee19961407349dece57.mp4" type="video/mp4"></video>
+                        
+                        
+
+                    </div>
+                    <div class="story__lower-gradient"></div>
+                </div>
+                <picture class="zoom-home__picture--ev-luxury">
+                    <source media="(min-device-width: 60em)"  type="image/webp" srcset="https://www.zoomcar.com/zap/subscribe/build/2a59620f522135d45def6fbc74162966.webp"     >
+                    <img src="2a59620f522135d45def6fbc74162966 .png" alt="ev-luxury image" class="zoom-home__img--ev-luxury">
+                </picture>
+                <article class="zoom-home__article--earning-steps">
+                    <h5 class="zoom-home__heading--earning-steps">3 Simple steps to Start Earning with your car in 24 hours</h5>
+                    
+                    <img src="images\Screenshot 2022-09-05 154944.png.png" alt="">
+                    <img src="images/Screenshot 2022-09-05 155023.png" alt="">
+                    <img src="images/Screenshot 2022-09-05 155045.png" alt="">
+                </article>
+               
+                <article class="zoom-home__article--stats">
+                    <h5 class="zoom-home__heading--stats">Growing rapidly</h5>
+                    <p zoom-home__description--stats>Join Host program and be part of the largest tech enabled car sharing marketplace.</p>
+                    <section class="zoom-home__section--stats">
+                        <div class="zoom-home__div--stat-item">
+                            <img src="https://www.zoomcar.com/zap/subscribe/build/e3a6d127cac35a3a7a139256bb3761eb.png" alt="stats-image" 
+                            class="zoom-home__img--stat-item">
+                            <h5 class="zoom-home__heading--stat-item" >25000+</h5>
+                            <span class="zoom-home__description--stat-item">Satisfied hosts</span>
+                        </div>
+                        <div class="zoom-home__div--stat-item">
+                            <img src="https://www.zoomcar.com/zap/subscribe/build/4a5f55fc81b9a6df6a460a025fdfa509.png" alt="stats-image" 
+                            class="zoom-home__img--stat-item">
+                            <h5 class="zoom-home__heading--stat-item" >50Lakhs+</h5>
+                            <span class="zoom-home__description--stat-item">Bookings served</span>
+                        </div>
+                        <div class="zoom-home__div--stat-item"><img src="https://www.zoomcar.com/zap/subscribe/build/36da13bf403485c4efacd507efd93735.png" alt="stats-image" 
+                            class="zoom-home__img--stat-item">
+                            <h5 class="zoom-home__heading--stat-item" >32Cr+</h5>
+                            <span class="zoom-home__description--stat-item">KMs Run</span></div>
+                        <div class="zoom-home__div--stat-item"><img src="https://www.zoomcar.com/zap/subscribe/build/c0db9479a08980b830b63433f60d336c.png" alt="stats-image" 
+                            class="zoom-home__img--stat-item">
+                            <h5 class="zoom-home__heading--stat-item" >₹300Cr+</h5>
+                            <span class="zoom-home__description--stat-item"> Earned by hosts</span></div>
+                    </section>
+                </article>
+                <section class="zoom-home__section--calculation">
+                    <h4 class="zoom-home__heading--calculation">
+                        
+        Share your
+                        <span class="zoom-home__text--dropdown">
+                            
+          XUV 500
+          <i class="fi fi-br-angle-down"></i>
+          
+                        </span>
+                        <br>
+                        and earn up to
+                        <span class="zoom-home__text--calculation">₹ 49,980</span>
+                        per month
+      
+                    </h4>
+                    <P class="zoom-home__text--min-earning"></P>
+                    <button class="zoom-home__btn--calculation">
+                        CALCULATE EARNING
+                      </button>
+
+                      <a href="#" class="zoom-home__link--calculation">
+                        How do we estimate your earning?
+                      </a>
+                
+                </section>
+                <section class="zoom-home__section--referral">
+                    <div class="zoom-home__div--referral">
+                        <h5 class="zoom-home__heading--referral">
+                            
+          You Earn ₹4,999/-
+          <br>
+          
+          Your Friend Gets upto ₹4,999/-
+        
+                        </h5>
+                        <span class="zoom-home__span--referral">
+                            You Both Win
+                          </span>
+                          <button class="zoom-home__button--referral">
+                            REFER AND EARN
+                          </button>
+                    </div>
+                    <p class="zoom-home__content--referral">
+                        This opportunity is for your friends in Bangalore, Pune, Delhi NCR, Mumbai, Chennai, Hyderabad, Chandigarh, Kolkata, Ahmedabad, Coimbatore, Indore, Jaipur, Mangalore, Mysore, Vizag, Goa, Nagpur, Kochi, Vijayawada, Siliguri, Bhopal, Lucknow, Guwahati, Bhubaneswar, Vadodara, Nashik, Trichy & Madurai only.
+                        <br>
+                    
+        Refer multiple friends to earn upto ₹ 1 Lakh.
+    </p>
+    <picture class="zoom-home__picture--referral">
+        <source media="(max-device-width: 48em)" type="image/webp" srcset="https://www.zoomcar.com/zap/subscribe/build/ea93d071cc3f16169717c687d529e25e.webp">
+        <source media="(min-device-width: 48em)" type="image/webp" srcset="https://www.zoomcar.com/zap/subscribe/build/b561826c55602da000820bda8422a23d.webp">
+        <img  alt="referral image"  
+         >
+    </picture>
+    <div class="zoom-home__quick-share-links">
+        <img src="https://www.zoomcar.com/zap/subscribe/build/47754324065ada140c6a81b3f2157554.svg" alt="whatsapp share icon" class="zoom-home__whatsaap-share-icon"
+        >
+        <img src="https://www.zoomcar.com/zap/subscribe/build/e6260c611d231d47cb00c13920f5eb27.svg" alt="other share icon" 
+          >
+    </div>
+
+                </section>
+                <section class="zoom-home__section--rating">
+                    <h5 class="zoom-home__heading--rating">
+                        Users love Zoomcar Host program. Our app has 4.5+ rating on play store!
+                    </h5>
+                    
+                    <video poster="https://www.zoomcar.com/zap/subscribe/build/634d050b0dbaf691c850eea5280f220b.jpg" autoplay muted
+                    disablepictureinpicture="true" playsinline="true" webkit-playsinline="true" preload="auto" loop="loop" class="zoom-home__video--rating zoom-home__video--desktop" >
+                <source type="video/mp4" src="https://www.zoomcar.com/zap/subscribe/build/993b9e144e89da0b2a0df580e13a2cbe.mp4"></video>
+
+                </section>
+                <article>
+                    <img style="width:100%" src="images/Screenshot 2022-09-05 185230.png" alt="">
+                </article>
+                <article class="zoom-home__article--faqs">
+                    <h5 class="zoom-home__heading--faqs">Still have questions?</h5>
+                    <div class="zoom-home__div--faqs">
+                        <section class="zoom-home__div--faqs">
+                            <span class="zoom-home__text--question">Do I need to meet the renters of my car?</span>
+                            <img  src="https://www.zoomcar.com/zap/subscribe/build/b6a35e84e2679c629ed351c4985e858f.svg"   
+                            alt="collapse faq answer"   class="zoom-home__img--faq zoom-home__show--image" >
+                            
+                        </section>
+                        <section class="zoom-home__div--faqs">
+                            <hr class="zoom-home__hr--faqs">
+                            <span class="zoom-home__text--question">How will I get Paid?</span>
+                            <img  src="https://www.zoomcar.com/zap/subscribe/build/b6a35e84e2679c629ed351c4985e858f.svg"   
+                            alt="collapse faq answer"   class="zoom-home__img--faq zoom-home__show--image" >
+                        </section>
+                        <section class="zoom-home__div--faqs">
+                            <hr class="zoom-home__hr--faqs">
+                            <span class="zoom-home__text--question">Zoomcar will take care of all challans incurred during car sharing.</span>
+                            <img  src="https://www.zoomcar.com/zap/subscribe/build/b6a35e84e2679c629ed351c4985e858f.svg"   
+                            alt="collapse faq answer"   class="zoom-home__img--faq zoom-home__show--image" >
+                        </section>
+                        <section class="zoom-home__div--faqs">
+                            <hr class="zoom-home__hr--faqs">
+                            <span class="zoom-home__text--question">How much will I earn?</span>
+                            <img  src="https://www.zoomcar.com/zap/subscribe/build/b6a35e84e2679c629ed351c4985e858f.svg"   
+                            alt="collapse faq answer"   class="zoom-home__img--faq zoom-home__show--image" >
+                        </section>
+                        <section class="zoom-home__div--faqs">
+                            <hr class="zoom-home__hr--faqs">
+                            <span class="zoom-home__text--question">How is the price of my car decided?</span>
+                            <img  src="https://www.zoomcar.com/zap/subscribe/build/b6a35e84e2679c629ed351c4985e858f.svg"   
+                            alt="collapse faq answer"   class="zoom-home__img--faq zoom-home__show--image" >
+                        </section>
+                        <section class="zoom-home__div--faqs">
+                            <hr class="zoom-home__hr--faqs">
+                            <span class="zoom-home__text--question">Why are safety devices installed?</span>
+                            <img  src="https://www.zoomcar.com/zap/subscribe/build/b6a35e84e2679c629ed351c4985e858f.svg"  
+                            alt="collapse faq answer"   class="zoom-home__img--faq zoom-home__show--image" >
+                        </section>
+                    </div>
+                </article>
+                <section class="zoom-home__section--contact-us">
+                    <h5 class="zoom-home__heading--contact-us">Still confused?</h5>
+                    <section class="image-card zoom-home__image-card--contact-us">
+                        <div class="image-card__text-wrapper">
+                            <div class="image-card__title">We are here to help</div>
+                            <div class="image-card__description">Visit detailed FAQs section or contact us for more details.</div> 
+                            <div class="image-card__cta-wrapper">
+                                <button class="image-card__cta">FAQS</button>
+                                <button class="image-card__cta">Contact Us</button>
+                            </div>
+                        </div>
+                        <img src="https://www.zoomcar.com/zap/subscribe/build/1481c0a139f0327896e2b071d9e392bd.svg" alt="image-card-icon"
+                        class="image-card__icon"  >
+                        <div class="image-card__empty-div"></div>
+                    </section>
+                </section>
+            </main>
+            <footer class="zoom-footer zoom-layout__footer">
+                <figure class="zoom-footer__end-of-page">
+                    <img src="https://www.zoomcar.com/zap/subscribe/build/5335b9a2cd132fc5c25ea3fec1177b02.svg" alt="end-of-page" class="zoom-footer__image--end-of-page">
+                    <hr class="zoom-footer__hr">
+                </figure>
+                <button  class="zoom-footer__button">
+                    <span class="zoom-footer__text zoom-footer__text--button">
+                        More about Zoomcar Host
+                    </span>
+                    <img src="https://www.zoomcar.com/zap/subscribe/build/b6a35e84e2679c629ed351c4985e858f.svg" alt="footer-chevron-up" class="zoom-footer__image--button">
+                </button>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+
+</body>
+</html>
+
