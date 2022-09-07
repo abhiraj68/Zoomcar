@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="zoom logo.png">
+    <style>
+        .page-search-container {
+    background-color: #f5f5f5;
+    
+}
+.page-search {
+    background-color: #f5f5f5;
+    display: flex;
+    padding: 16px 16px;
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+}
+.page-search__left {
+    display: block;
+    flex: 0 1 29%;
+    max-width: 29%;
+}
+.sort-container {
+    background-color: white;
+    padding: 25px 54px; 
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0px 0px 1px 1px #e0e0e0;
+    font-size: 12px;
+}
+.filter__blue-box-text {
+    background-color: #f0f4ff;
+    color: #5160c2;
+    font-size: 12px;
+    padding: 12px 16px;
+    border-radius: 4px;
+    margin-bottom: 24px;
+}
+
+.page-search .page-search-right>div {
+    margin-left: 16px;
+}
+
+.boxupper{
+display: grid; 
+grid-template-columns: repeat(2,1fr);
+gap: 10px;
+
+  
+
+}
+.twobox{
+    border: 2px solid #10a310;
+    height: 70px;
+    border-radius: 10px;
+}
+.page-search .page-search-right {
+    flex: 0 1 70%;
+    max-width: 70%;
+}
+.carlist{
+    margin-top: 36px;
+  
+    /* display: flex;
+    flex-direction: column; */
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 20px;
+    
+}
+.carbox{
+    
+    /* margin-bottom: 10px; */
+    
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   
+  
+    
+   
+}
+.innerbox{
+    text-align: center;
+    
+    height: 140px;
+    width: 100%;
+    margin: auto
+    
+    
+}
+img{
+    height: 100%;
+}
+.cardetails{
+    display: flex;
+    justify-content: space-evenly;
+}
+.btn{
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-color: #10a310;
+    border-radius: 8px;
+
+}
+.btn:hover{
+    background-color: #10a310;
+}
+.options{
+    padding: 10px;
+    margin: 20px;
+    border-color: #10a310;
+    width: 250px;
+    border-radius: 10px;
+    text-decoration: solid;
+}
+* {
+    margin: 0px;
+    font-family: 'Anton', sans-serif;
+}
+
+header {
+    margin-top: 0px;
+    border: 2px solid black;
+    height: 80px;
+    background-color: black;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 15;
+}
+
+#bar {
+    padding-top: 20px;
+    padding-left: 5px;
+
+    padding-right: 10px;
+}
+
+i {
+    color: aliceblue;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+#zoomlog {
+    padding-top: 13px;
+
+}
+
+.parentdiv {
+    display: flex;
+}
+
+nav {
+
+    width: 100%;
+
+    padding: 10px;
+}
+
+nav ul {
+    float: right;
+}
+
+nav li {
+    display: inline-block;
+    list-style: none;
+    /* padding-top: 10px; */
+}
+
+
+
+header a {
+    padding: 0 40px;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 25px;
+    /* font-weight: bold; */
+}
+
+
+#host div {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+
+
+
+
+#host a {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#host span {
+    color: black;
+
+    font-size: 20px;
+}
+
+#host a {
+    padding: 0px;
+}
+ .carbox h3{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+#twobox{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Anton', sans-serif;
+    font-weight: bold;
+    color: #1f1f1f;
+}
+.date{
+   text-align: center;
+   width: 134px;
+}
+    </style>
+</head>
+<body>
+    <header>
+
+        <div class="parentdiv">
+            <a href="#">
+                <p id="bar">
+                    <i class="fa-solid fa-bars"></i>
+                </p>
+            </a>
+            <div id="zoomlog">
+                <img src="https://www.zoomcar.com/build/98e56e8b0b91e8806885a22ac2bf69a7.png" />
+            </div>
+            <nav>
+                <!-- <div>
+                    <img src="https://www.zoomcar.com/build/e222e7ff96ffdd76290118718d52d71f.svg" />
+                    <span>Become a host</span>
+                </div> -->
+                <ul>
+
+
+
+                    <li id="host">
+
+
+                        <div>
+                            <a href="partnerPage.html">
+                                <img src="https://www.zoomcar.com/build/e222e7ff96ffdd76290118718d52d71f.svg" />
+                                <span>Become a host</span>
+                            </a>
+                        </div>
+                        <!-- </a> -->
+                    </li>
+
+
+                    <li><a style="font-family: 'Anton', sans-serif ;font-weight: bold;" href="#">
+                            ZMS
+                        </a> </li>
+                    <li><a style="font-family: 'Anton', sans-serif ;font-weight: bold;" href="#" id="loginName">
+                            
+                        </a> </li>
+
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+    <div class="page-search-container">
+        <div class="page-search">
+            <div class="page-search__left">
+                <div class="sort-container">
+
+                    <select  id="sortPrice" onchange="handlePriceSort()" class="options">
+                        <option value="">Sort by Price</option>
+                        <option value="low">Low To High</option>
+                        <option value="high">High To Low</option>
+                    </select>
+                    <br>
+                    <select  id="filterFuel" onchange="handleFuelFilter()" class="options">
+                        <option value="all">Filter by Fuel</option>
+                        <option value="Petrol">Petrol</option>
+                        <option value="Diesel">Diesel</option>
+                    </select>
+                    <br>
+                    <select  id="filterSeats" onchange="handleSeatsFilter()" class="options">
+                    <option value="all">Filter by no of Seats</option>
+                    <option value="5">5</option>
+                    <option value="7">7</option>
+                </select>
+                <br>
+                <select  id="filterEngine" onchange="handleEngineFilter()" class="options">
+                    <option value="all">Filter by Engine option</option>
+                    <option value="Automatic">Automatic</option>
+                    <option value="Manual">Manual</option>
+                </select>
+                </div>
+                <div class="filter__blue-box-text">
+                    
+          Enjoy free kilometers. If you leave the car with excess fuel compared to booking start, value of that extra fuel will be refunded to you
+        
+                </div>
+            </div>
+            <div class="page-search-right">
+                <div class="boxupper">
+                    <div class="twobox">
+
+                    </div>
+                    <div class="twobox" id="twobox">
+                       <div>
+                        <h1>Start Date</h1>
+                        <input type="date" class="date" id="startDate" >
+                       </div>
+                       <div>
+                        <h1>End Date</h1>
+                        <input type="date" class="date" id="endDate" onchange="changeStartDate()">
+                       </div>
+     
+                    </div>
+                    
+                </div>
+                <div class="carlist" id="body">
+                        
+                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+    
+   
+    
+    
+   
+    
+  
+    
+</body>
+</html>
+
+<script>
+    var carData = [
+    {
+      image_url:
+        "https://zoomcar-assets.zoomcar.com/photographs/original/d7ba329c386c0331e896bae1e3285ef7d3f23972.png?1584526043",
+      name: "Maruti Swift",
+      price: "2580",
+      trans: "Manual",
+      fuel:"Diesel",
+      seat:"5",
+    },
+    {
+        image_url:
+        "https://zoomcar-assets.zoomcar.com/photographs/original/bb5d7ad99cf9ee445440a652489069fb17d0712e.jpg?1640674410",
+      name: "Maruti Celerio AT",
+      price: "2502",
+      trans: "Automatic",
+      fuel:"Petrol",
+      seat:"5",
+    },
+    {
+        image_url:
+        "https://zoomcar-assets.zoomcar.com/photographs/original/efa1e98bbb81150cf57c98df093de5899dcafcd5.jpg?1640674575",
+      name: "Maruti Ertiga",
+      price: "3945",
+      trans: "Manual",
+      fuel:"Petrol",
+      seat:"7",
+    },
+    {
+        image_url:
+        "https://zoomcar-assets.zoomcar.com/photographs/original/c5d25b436da0aeb9ca1c25c86d8e85a1e9115aaf.JPG?1623135458",
+      name: "Renault Triber",
+      price: "2921",
+      trans: "Manual",
+      fuel:"Petrol",
+      seat:"7",
+    },
+    {
+        image_url:
+        "https://zoomcar-assets.zoomcar.com/photographs/original/6a75117e054e7d3bbe9ff6e431008679994c1d71.png?1584525114",
+      name: "Maruti Brezza",
+      price: "2921",
+      trans: "Manual",
+      fuel:"Diesel",
+      seat:"5",
+    },
+    {
+        image_url:
+        "https://zoomcar-assets.zoomcar.com/photographs/original/dad908930596f934ee31f1bfb45181f3f0352365.jpg?1640671282",
+      name: "Honda City",
+      price: "3341",
+      trans: "Manual",
+      fuel:"Diesel",
+      seat:"5",
+    },
+    {
+        image_url:
+        "https://zoomcar-assets.zoomcar.com/photographs/original/7bb2b597b5040b4ccb4d2e0996ce45cdf6d851be.JPG?1637560780",
+      name: "Maruti Alto",
+      price: "2049",
+      trans: "Manual",
+      fuel:"Petrol",
+      seat:"5",
+    },
+    {
+        image_url:
+        "https://zoomcar-assets.zoomcar.com/photographs/original/741d5e6e6b4a35cc2623eaf23e251357903995a1.jpg?1628513745",
+      name: "Datsun Redi-Go",
+      price: "2277",
+      trans: "Automatic",
+      fuel:"Petrol",
+      seat:"5",
+    },
+    {
+        image_url:
+        "https://zoomcar-assets.zoomcar.com/photographs/original/d44ae1d555cfe2dd4b499c3e75f2fcda0504a6de.JPG?1654862797",
+      name: "Tata Nexon",
+      price: "3896",
+      trans: "Manual",
+      fuel:"Petrol",
+      seat:"5",
+    },
+    {
+        image_url:
+        "https://zoomcar-assets.zoomcar.com/photographs/original/84ff6cb8985ccb3157b2264ef7eae5951a37d375.JPG?1631869242",
+      name: "Mahindra XUV300",
+      price: "3561",
+      trans: "Manual",
+      fuel:"Diesel",
+      seat:"5",
+    },
+    {
+        image_url:
+        "https://zoomcar-assets.zoomcar.com/photographs/original/3fb2751edb5a0c23dc41e0d68ebaf7644cd3152a.JPG?1642228090",
+      name: "BMW X1",
+      price: "6000",
+      trans: "Automatic",
+      fuel:"Diesel",
+      seat:"5",
+    },
+    {
+        image_url:"https://zoomcar-assets.zoomcar.com/photographs/original/b0a28d72f5998ae116253aa1b78d9290a70b264d.JPG?1622187307",
+      name: "KIA Seltos",
+      price: "4529",
+      trans: "Manual",
+      fuel:"Petrol",
+      seat:"5",
+    },
+  ];
+
+  function changeStartDate(){
+    var x=document.getElementById("startDate").value
+    console.log(x)
+  }
+  function changeStartDate(){
+    var y=document.getElementById("endDate").value
+    console.log(y)
+  }
+  
+
+displayData(carData)
+
+   function handleEngineFilter(){
+    var selectedEngine=document.getElementById("filterEngine").value;
+    var filterEngine=carData.filter(function(elem){
+        if(selectedEngine==="all"){
+          return 1;
+        }
+        return elem.trans === selectedEngine
+      })
+      displayData(filterEngine)
+   }
+
+   function handleFuelFilter(){
+    var selectedFuel=document.getElementById("filterFuel").value;
+    var filterFuel=carData.filter(function(elem){
+        if(selectedFuel==="all"){
+          return 1;
+        }
+        return elem.fuel === selectedFuel
+      })
+      displayData(filterFuel)
+   }
+
+   function handleSeatsFilter(){
+    var selectedSeats=document.getElementById("filterSeats").value;
+    var filterSeats=carData.filter(function(elem){
+        if(selectedSeats==="all"){
+          return 1;
+        }
+        return elem.seat === selectedSeats
+      })
+      displayData(filterSeats)
+   }
+
+   function handlePriceSort(){
+      var priceOrder=document.getElementById("sortPrice").value
+      if(priceOrder==="low"){
+        carData.sort(function(a,b){
+          return a.price-b.price
+        })
+      }
+      if(priceOrder==="high"){
+        carData.sort(function(a,b){
+          return b.price-a.price
+        })
+      }
+      displayData(carData)
+    }
+
+
+
+  function displayData(cars){
+    document.getElementById("body").innerText=""
+    cars.map(function(elem){
+    var carbox=document.createElement("div")
+    carbox.setAttribute("class","carbox")
+    var innerbox1=document.createElement("div")
+    innerbox1.setAttribute("class","innerbox")
+    var image=document.createElement("img")
+    image.setAttribute("src",elem.image_url)
+    image.setAttribute("alt",elem.name)
+    var innerbox2=document.createElement("div")
+    innerbox2.setAttribute("class","innerbox")
+    var h3=document.createElement("h3")
+    h3.innerText=elem.name
+    var cardetails=document.createElement("div")
+    cardetails.setAttribute("class","cardetails")
+    var div1=document.createElement("div")
+    var p1=document.createElement("p")
+    p1.innerText=elem.trans
+    var div2=document.createElement("div")
+    var p2=document.createElement("p")
+    p2.innerText=elem.fuel
+    var div3=document.createElement("div")
+    var p3=document.createElement("p")
+    p3.innerText=elem.seat+" "+"Seats"
+    var innerbox3=document.createElement("div")
+    innerbox3.setAttribute("class","innerbox")
+    var innerbox4=document.createElement("div")
+    innerbox4.setAttribute("class","innerbox")
+    var h33=document.createElement("h3")
+    h33.innerText="₹"+elem.price
+    var anc=document.createElement("a")
+    anc.setAttribute("href","checkoutPage.html")
+    var btn=document.createElement("button")
+    btn.innerText="Book Now"
+    btn.setAttribute("class","btn")
+  
+   
+
+
+    div1.append(p1)
+    div2.append(p2)
+    div3.append(p3)
+    cardetails.append(div1,div2,div3)
+    innerbox1.append(image)
+    innerbox2.append(h3,cardetails)
+    anc.append(btn)
+    innerbox4.append(h33,anc)
+    carbox.append(innerbox1,innerbox2,innerbox3,innerbox4)
+    document.getElementById("body").append(carbox)
+
+  })
+
+  }
+ 
+  localStorage.setItem("loginName","Abhiraj Rajappan")
+  var loginName=localStorage.getItem("loginName")
+  document.getElementById("loginName").innerText=loginName
+</script>
