@@ -1,5 +1,9 @@
 * {
+   
     margin: 0px;
+}
+a{
+    color: black;
 }
 
 header {
@@ -174,6 +178,7 @@ header a {
 }
 
 
+
 .tab {
 
     border: 1px solid rgb(105, 163, 77);
@@ -334,7 +339,7 @@ h3+p {
 }
 
 #menubar {
-    width: 30%;
+    width: 26%;
     height: 100vh;
     /* border: 4px red solid; */
     position: fixed;
@@ -345,8 +350,29 @@ h3+p {
 #tab>a {
     width: 100%;
 }
+#zoomlog a{
+    margin: 0%;
+    padding: 0%;
+}
 
-
+#anchor{
+    width: 100%;
+    height: 40px;
+    border: red solid;
+    background-color: #5dcb5d;
+}
+#bardiv{
+    width: 100%;
+    height: 600px;
+    border: 3px rgb(92, 16, 213) solid;
+    display: flex;
+    flex-direction: column;
+}
+#childdiv{
+    width: 100%;
+    height: 100vh;
+    border: 2px purple solid;
+}
 @media screen and (max-width:900px) {
 
     #tab,
@@ -364,3 +390,52 @@ h3+p {
         width: 80%;
     }
 }
+
+#tab2 input{
+    border: none;
+}
+
+.menuSection{
+    display: block;
+    /* border: 1px yellow solid; */
+    /* width: 100%; */
+  height: 50px;  
+}
+#menubar .menuSection>div{
+    /* border: 1px black solid; */
+    height: 50px;
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+.childdiv1{
+ /* background-color: rgb(229,232,236); */
+ border: #5dcb5d solid;
+}
+
+#menubar i{
+    color: rgb(10, 10, 10);
+padding-left: 10px;
+    font-size: 20PX;
+
+}
+
+#menubar{
+    transition-duration: 500ms;
+    transition: 0.5s;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+#menubar > a:nth-child(1) >div:nth-child(1) {
+
+    background-color: rgb(229,232,236);
+}
+.zoomm{
+    padding-left: 20px;
+    
+}
+.zoomm img{
+    width: 100%;
+    height: 30px;
+}
+
