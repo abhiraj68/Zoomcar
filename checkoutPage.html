@@ -1,190 +1,911 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checout Page</title>
+    <title>Checkout Page</title>
     <style>
-        *{
+        * {
             margin: 0;
             font-family: 'Anton', sans-serif;
         }
-        .navbar{
-            background-color: black;
-            height: 55px;
+
+        .navbar {
+
+
             color: white;
             display: flex;
             padding: 6px;
+            position: sticky;
+
+            margin-top: 0px;
+            border: 2px solid black;
+            height: 55px;
+            background-color: black;
+            position: sticky;
+            top: 0px;
+            left: 0px;
+            z-index: 15;
+
         }
-        .navbar i{
+
+        .navbar i {
             color: white;
             font-size: 40px;
-            margin:6px;
+            margin: 6px;
         }
-        .navbar>div{
+
+        .navbar>div {
             margin: 5px;
         }
 
-        .pageContent{
-            border: 2px solid teal;
-            
-            width: 38%;
+        .pageContent {
+
+
+            max-width: 600px;
             margin: auto;
+            height: 1600px;
         }
-        .rowone{
+
+        .rowone {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        .rowone >div{
+
+        .rowone>div {
             margin: 10px;
-            
-            
+
+
         }
-        .rowone >div>div{
+
+        .rowone>div>div {
             display: flex;
             justify-content: space-between;
-          
+
         }
-        .rowone >div>div>div{
+
+        .rowone>div>div>div {
             display: flex;
             justify-content: space-between;
             padding: 5px;
-          
+
         }
-        .cardetails{
+
+        .cardetails {
             padding: 10px;
         }
-        .cardetailsC{
+
+        .cardetailsC {
             margin: 20px;
         }
-        .cardetailsC img{
-           margin-right: 5px;
+
+        .cardetailsC img {
+            margin-right: 5px;
         }
-        .smallbox{
+
+        .smallbox {
             background-color: #f0f4ff;
             padding: 12px 40px 12px 16px;
-    margin-top: 16px;
-    border-radius: 4px;
-    margin-left: 27px;
+            margin-top: 16px;
+            border-radius: 4px;
+            margin-left: 27px;
+            margin-bottom: 50px;
+            margin-right: 27px;
         }
-        .wallet{
+
+        .bigbox {
+
+            background-color: #f5f5f5ff;
+            padding: 12px 40px 12px 16px;
+            margin-top: 16px;
+            border-radius: 4px;
+            margin-left: 27px;
+            margin-bottom: 50px;
+            margin-right: 27px;
+        }
+
+        .wallet {
             margin-top: 20px;
             margin-left: 27px;
             display: flex;
             justify-content: space-between;
         }
+
         .wallet>div {
             display: flex;
-           
+
         }
-        .wallet img{
+
+        .wallet img {
             padding: 5px;
         }
-           </style>
+
+        .card-section-container {
+            font-family: "IBM Plex Sans";
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+            letter-spacing: 0.24px;
+            color: #1f1f1f;
+            padding: 32px 16px 0px;
+        }
+
+        .checkout-card-container {
+            padding: 16px 0px 0px;
+            display: flex;
+        }
+
+        .icon {
+            background-repeat: no-repeat;
+            background-position: center center;
+            display: block;
+            width: 32px;
+            height: 32px;
+            background-size: cover;
+        }
+
+        .checkout-card-container .content-container {
+            flex: 2;
+            padding-left: 8px;
+        }
+
+        .content-text {
+            font-family: 'IBM Plex Sans';
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400;
+            letter-spacing: 0.24px;
+            color: #1f1f1f;
+        }
+
+        .checkout-card-container {
+            padding: 16px 0px 0px;
+            display: flex;
+        }
+
+        .icon img {
+            width: 24px;
+            max-width: 24px;
+        }
+
+        .content-sub-text {
+            margin-top: 2px;
+            font-family: 'IBM Plex Sans';
+            font-size: 12px;
+            line-height: 16px;
+            font-weight: 400;
+            letter-spacing: 0.4px;
+            color: #a8a8a8;
+        }
+
+        .card-hyperlink {
+            padding-top: 8px;
+            text-decoration: underline;
+            font-family: 'IBM Plex Sans';
+            font-size: 12px;
+            line-height: 16px;
+            font-weight: 400;
+            letter-spacing: 0.4px;
+            color: #10a310;
+        }
+
+        .payment-details {
+            background: #fff;
+            padding: 16px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 8px 10px 1px rgb(0 0 0 / 14%), 0 3px 14px 2px rgb(0 0 0 / 12%), 0 5px 5px -3px rgb(0 0 0 / 20%);
+        }
+
+        .price-coupon-container {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 12px;
+            align-items: baseline;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .price-container {
+            display: flex;
+            align-items: baseline;
+        }
+
+        .final-price {
+            font-family: "IBM Plex Sans";
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 28px;
+            color: #1f1f1f;
+        }
+
+        .coupon-container {
+            display: flex;
+            align-items: baseline;
+        }
+
+        .view-promo {
+            display: flex;
+            align-items: baseline;
+        }
+
+        .coupon-container i {
+            display: flex;
+            align-items: baseline;
+            font-size: 24px;
+            position: relative;
+            bottom: -8px;
+            color: #10a310;
+        }
+
+        .view-offer {
+            padding-left: 8px;
+            padding-right: 8px;
+            font-family: "IBM Plex Sans";
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 16px;
+            color: #1f1f1f;
+        }
+
+        .payment-action {
+            border: none;
+            border-radius: 4px;
+            background-color: #10a310;
+            padding: 16px 20px;
+            width: 100%;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+
+            font-family: "IBM Plex Sans";
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 16px;
+            letter-spacing: 0.8px;
+            color: #fff;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .carDetails {
+            padding: 12px 16px 12px;
+            position: relative;
+        }
+
+        .trip-information {
+            font-family: "IBM Plex Sans";
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+            letter-spacing: 0.24px;
+            color: #1f1f1f;
+        }
+
+         .car-trip-info {
+            padding: 16px 0px 0px;
+            display: flex;
+        }
+
+        .car-trip-info .icon.start-icon {
+            border-radius: 12px;
+            background-color: #e6ffea;
+        }
+
+         .car-trip-info .icon {
+            width: 24px;
+            height: 24px;
+            padding: 8px;
+        }
+
+       .icon.start-icon div {
+            width: 8px;
+            height: 8px;
+            border-radius: 8px;
+            background-color: #10a310;
+        }
+
+        .icon {
+            background-repeat: no-repeat;
+            background-position: center center;
+            display: block;
+
+            background-size: cover;
+        }
+
+        .content-container {
+            flex: 1;
+            padding-left: 8px;
+        }
+
+         .content-text {
+            font-family: "IBM Plex Sans";
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400;
+            letter-spacing: 0.24px;
+            color: #1f1f1f;
+        }
+
+         .content-sub-text {
+            font-family: "IBM Plex Sans";
+            font-size: 12px;
+            line-height: 16px;
+            font-weight: 400;
+            letter-spacing: 0.4px;
+            color: #a8a8a8;
+        }
+
+         .connector {
+            width: 2px;
+            height: 34px;
+            background-image: linear-gradient(to bottom, #e6ffea, #fff3f0);
+            position: absolute;
+            top: 46px;
+            left: 27px;
+        }
+
+         .car-trip-info {
+            padding: 16px 0px 0px;
+            display: flex;
+        }
+
+        .icon.destination-icon {
+            width: 20px;
+            height: 20px;
+            padding: 7px;
+            margin: 0px 2px;
+            background-color: #fff3f0;
+        }
+
+        .icon.destination-icon div {
+            background-color: #e02d2d;
+        }
+
+        .icon div {
+            width: 6px;
+            height: 6px;
+            margin: 0 auto;
+        }
+
+        .checkout-card-container {
+            padding: 16px 0px 0px;
+            display: flex;
+        }
+
+        .icon img {
+            width: 24px;
+            max-width: 24px;
+        }
+
+        .content-text {
+            font-family: 'IBM Plex Sans';
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400;
+            letter-spacing: 0.24px;
+            color: #1f1f1f;
+        }
+
+        .checkout-card-container {
+            padding: 16px 0px 0px;
+            display: flex;
+        }
+
+         .content-text {
+            font-family: 'IBM Plex Sans';
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400;
+            letter-spacing: 0.24px;
+            color: #1f1f1f;
+        }
+
+         .location-details {
+            background-color: #f0f4ff;
+            padding: 12px 40px 12px 16px;
+            margin-top: 16px;
+            border-radius: 4px;
+        }
+
+        .location-details div {
+            font-family: "IBM Plex Sans";
+            font-size: 12px;
+            line-height: 16px;
+            font-weight: 400;
+            letter-spacing: 0.4px;
+            color: #5160c2;
+        }
+
+        .card-section-container {
+            font-family: "IBM Plex Sans";
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+            letter-spacing: 0.24px;
+            color: #1f1f1f;
+            padding: 32px 16px 0px;
+        }
+
+        .checkout-card-container {
+            padding: 16px 0px 0px;
+            display: flex;
+        }
+
+      .content-container {
+            flex: 2;
+            padding-left: 8px;
+        }
+
+         .checkbox-container {
+            display: block;
+            position: relative;
+            padding-left: 16px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .content-rec-text{
+    font-family: "IBM Plex Sans";
+    font-size: 12px;
+    line-height: 16px;
+    
+    letter-spacing: 2px;
+    color: #10a310;
+    font-weight: bold;
+    margin-top: 2px;
+}
+.bg-grey {
+    padding: 12px 16px 16px 8px;
+    margin-top: 16px;
+    background-color: #f5f5f5;
+}
+ .bg-grey-sub-text {
+    font-family: "IBM Plex Sans";
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    color: #1f1f1f;
+    color: #1f1f1f;
+}
+.bg-modal{
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.7);
+ 
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    
+   
+}
+.modal-contend{
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    border-radius: 4px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+.close{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+    transform:rotate(45deg); 
+    cursor: pointer     ;
+}
+.modal-contend input{
+    width: 50%;
+    display: block;
+    margin: 15px auto;
+    width: 45%;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 16px 20px;
+}
+#applybtn{
+    background-color: #10a310;
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 16px 20px;
+    width: 60%;
+    letter-spacing: 0.8px;
+    border: none;
+}
+
+    </style>
 </head>
+
 <body>
-    <div >
+    <div>
         <div class="navbar">
-           <div ><a href="carPage.html"><i class="fa-solid fa-arrow-left"></i></a></div>
-           <div >
-            <h3>Maruti Suzuki</h3>
-            <p>Date And Time</p>
-           </div>
+            <div><a href="carPage.html"><i class="fa-solid fa-arrow-left"></i></a></div>
+            <div>
+                <h3 id="Carname">Maruti Suzuki</h3>
+                <p id="date">Date And Time</p>
+            </div>
         </div>
 
         <div class="pageContent">
             <div class="rowone">
                 <div>
-                    <h3>Maruti Dzire</h3>
+                    <h3 id="Carname1">Maruti Dzire</h3>
                     <div>
-                        <div><img src="https://zoomcar-assets.zoomcar.com/images/original/2aceee9e84a7bf79ae8928ace92944abbac907d4.png?1584455088" alt="" style="width:16px ;">
-                        <p>Manual</p></div>
-                        <div><img src="https://zoomcar-assets.zoomcar.com/images/original/4c611ba1fb54d1e42553020d9022e5ab2dac14ea.png?1584455110" alt="" style="width:16px ;">
-                         <p>Petrol</p></div>
+                        <div ><img
+                           
+                                src="https://zoomcar-assets.zoomcar.com/images/original/2aceee9e84a7bf79ae8928ace92944abbac907d4.png?1584455088"
+                                alt="" style="width:16px ;">
+                            <p id="trans">Manual</p>
+                        </div>
+                        <div><img
+                                src="https://zoomcar-assets.zoomcar.com/images/original/4c611ba1fb54d1e42553020d9022e5ab2dac14ea.png?1584455110"
+                                alt="" style="width:16px ;">
+                            <p id="fuel">Petrol</p>
+                        </div>
                     </div>
-        
+
                 </div>
                 <div>
-                    <img src="https://zoomcar-assets.zoomcar.com/photographs/original/524fda673d85d7affc94f9c54ddb2ed1219d3a4d.JPG?1638612892" alt="" style="max-height:110px ;">
+                    <img  id="carImage" src="https://zoomcar-assets.zoomcar.com/photographs/original/524fda673d85d7affc94f9c54ddb2ed1219d3a4d.JPG?1638612892"
+                        alt="" style="max-height:110px ;">
                 </div>
             </div>
-            <div class="cardetails">
-                <div class="cardetailsC">Thu, 08 Sep, 08:30 AM</div>
-                <p class="cardetailsC" style="font-size:12px ;">Rasta Peth</p>
-                <div class="cardetailsC">Thu, 08 Sep, 08:30 AM</div>
-                <p class="cardetailsC" style="font-size:12px ;">Rasta Peth</p>
-                <div class="cardetailsC" style="display:flex ;">
-                    <img style="width: 24px;" src="https://zoomcar-assets.zoomcar.com/images/original/ccedfb3dddda918d76ad27240ffa582f4a59a157.png?1584454852" alt="">
-                    <div>Unlimited Kms without Fuel</div>
-                </div>
-                <div class="cardetailsC" style="display:flex ;">
-                    <img style="width: 24px;" src="https://zoomcar-assets.zoomcar.com/images/original/b04593cd90f850d14ed46ed739b0371457ef6834.png?1633947533" alt="">
-                    <div>
-                        5.0 (45) · 49,231 kms driven</div>
-                </div>
-            </div>
-            <div class="smallbox">
-                <div>Exact car location will be shared 4 hours before trip start time</div>
-            </div>
-
-            <div style="margin-left: 27px;">Wallet</div>
-
-            
-            <div class="wallet" >
-                
-                <div>
-                    <img style="width: 24px;" src="https://zoomcar-assets.zoomcar.com/images/original/adc666313916454e26bf1de51aaa2df6d385ec01.png?1592225197" alt="">
-                    <div>
-                        <div>Use Z Points worth ₹28</div>
-                        <div>28 Z Points available</div>
-                    </div>
+            <div class="carDetails">
+                <div class="trip-information">
                     
+                    <div class="car-trip-info">
+                        <div class="icon start-icon">
+                            <div></div>
+                        </div>
+                        <div class="content-container">
+                            <div id="date1" class="content-text">Thu, 08 Sep, 08:30 AM</div>
+                            <div class="content-sub-text">Opposite to Market yard</div>
+                        </div>
+                    </div>
+                    <div class="connector"></div>
+                    <div class="car-trip-info">
+                        <div class="icon destination-icon">
+                            <div></div>
+                        </div>
+                        <div class="content-container">
+                            <div id="date2" class="content-text">Thu, 08 Sep, 04:30 PM</div>
+                            <div class="content-sub-text">Opposite to Market yard</div>
+                        </div>
+                    </div>
+
                 </div>
                 <div>
-                    <i style="color:green ;" class="fa-solid fa-check"></i>
+                    <div>
+                        <div class="checkout-card-container">
+                            <div class="icon"><img
+                                    src="https://zoomcar-assets.zoomcar.com/images/original/ccedfb3dddda918d76ad27240ffa582f4a59a157.png?1584454852"
+                                    alt="icon"></div>
+                            <div class="content-container">
+                                <div class="content-text content-text">Unlimited Kms without Fuel</div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div class="checkout-card-container">
+                            <div class="icon"><img
+                                    src="https://zoomcar-assets.zoomcar.com/images/original/b04593cd90f850d14ed46ed739b0371457ef6834.png?1633947533"
+                                    alt="icon"></div>
+                            <div class="content-container">
+                                <div class="content-text content-text">5.0 (14) · 37,177 kms driven</div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="location-details">
+                    <div>Exact car location will be shared 4 hours before trip start time</div>
                 </div>
             </div>
-            <div style="margin-left: 27px;">Other Charges</div>
-            <div class="wallet">
-            
-                <div>
-                    <img style="width: 24px;" src="https://zoomcar-assets.zoomcar.com/images/original/8b49713465c5c33330880cfe739ef06348b2c0f0.png?1659443762" alt="">
+
+
+
+
+            <div>
+                <div class="card-section-container">
+                    <div >
+                        Wallet
+                    </div>
                     <div>
                         <div>
-                            Convenience Fee ₹99</div>
-                        
+                            <div class="checkout-card-container">
+                                <div class="icon"><img
+                                        src="https://zoomcar-assets.zoomcar.com/images/original/adc666313916454e26bf1de51aaa2df6d385ec01.png?1592225197"
+                                        alt="icon"></div>
+                                <div class="content-container">
+                                    <div class="content-text content-text">Use Z Points worth ₹28</div>
+                                    <div class="content-sub-text">28 Z Points available</div>
+
+                                </div>
+                                <label class="checkbox-container"><input type="checkbox">
+                                    <div class="control-indicator"></div>
+                                </label>
+
+
+                            </div>
+
+                        </div>
                     </div>
-                    
                 </div>
-                <div>
-                    
+            </div>
+            <div>
+                <div class="card-section-container">
+                    <div data-id="CONVENIENCE_FEE">
+                        Other Charges
+                    </div>
+                    <div>
+                        <div>
+                            <div class="checkout-card-container">
+                                <div class="icon"><img
+                                        src="https://zoomcar-assets.zoomcar.com/images/original/8b49713465c5c33330880cfe739ef06348b2c0f0.png?1659443762"
+                                        alt="icon"></div>
+                                <div class="content-container">
+                                    <div class="content-text content-text">Convenience Fee ₹99</div>
+                                   
+                                </div>
+                               
+                            </div>
+                          
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div style="margin-left: 27px;">Damage Protection Package</div>
-            <div class="wallet">
-            
-                <div>
-                    <img style="width: 24px;" src="https://zoomcar-assets.zoomcar.com/images/original/f6b01d4ca15bc999a8a0bbe2bb64710cf71f9b75.png?1633967237" alt="">
+
+            <div>
+                <div class="card-section-container">
+                    <div data-id="DPP">
+                        Damage Protection Package
+                    </div>
                     <div>
                         <div>
-                            Standard (₹246)</div>
-                            <div>You pay up to INR 3499 in case of any damage</div>
-                            <div>RECOMMENDED FOR YOU</div>
-                        
+                            <div class="checkout-card-container">
+                                <div class="icon"><img
+                                        src="https://zoomcar-assets.zoomcar.com/images/original/f6b01d4ca15bc999a8a0bbe2bb64710cf71f9b75.png?1633967237"
+                                        alt="icon"></div>
+                                <div class="content-container">
+                                    <div class="content-text content-text">Standard (₹245)</div>
+                                    <div class="content-sub-text">You pay up to INR 3499 in case of any damage</div>
+                                    <div class="content-recommended-text" style="    color: #10a310;;">
+                                        RECOMMENDED FOR YOU
+                                    </div>
+                                    
+                                </div>
+                                <label class="radio-container"><input type="radio" name="DPP" value="102">
+                                    <div class="control-indicator"></div>
+                                </label>
+                               
+                            </div>
+                            
+                        </div>
                     </div>
-                    
+                    <div>
+                        <div>
+                            <div class="checkout-card-container">
+                                <div class="icon"><img
+                                        src="https://zoomcar-assets.zoomcar.com/images/original/97e7b92d185271d80fa2e7638a3eead238f9a0ed.png?1633967297"
+                                        alt="icon"></div>
+                                <div class="content-container">
+                                    <div class="content-text content-text">Peace of Mind (₹289)</div>
+                                    <div class="content-sub-text">You pay up to INR 249 in case of any damage</div>
+                                    
+                                </div>
+                                <label class="radio-container"><input type="radio" name="DPP" value="103">
+                                    <div class="control-indicator"></div>
+                                </label>
+                               
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <div class="checkout-card-container bg-grey">
+                               
+                                <div class="content-container">
+                                    <div class="content-text content-text">How Damage Protection Works?</div>
+                                    <div class="bg-grey-sub-text">Incase of accidents or any damage to the car, Zoomcar
+                                        will take care of the expenses. You pay the minimum amount as per the package
+                                        and we take care of the rest. Higher the package you select, lower the risk at
+                                        your end for any damage. Please note that this is applicable solely in the case
+                                        of damage to the vehicle and does not cover for any other third party loss.
+                                    </div>
+                                   
+                                </div>
+                               
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-section-container">
+                <div data-id="KEEP_IN_MIND">
+                    Keep In Mind
                 </div>
                 <div>
-                    
+                    <div>
+                        <div class="checkout-card-container">
+                            <div class="icon"><img
+                                    src="https://zoomcar-assets.zoomcar.com/images/original/0ebf53a526da3baa9621436223d17ee0a712495e.png?1584454768"
+                                    alt="icon"></div>
+                            <div class="content-container">
+                                <div class="content-text content-text">Driving License Mandatory</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div> 
-
-        </div>
+                <div>
+                    <div>
+                        <div class="checkout-card-container">
+                            <div class="icon"><img
+                                    src="https://zoomcar-assets.zoomcar.com/images/original/ccedfb3dddda918d76ad27240ffa582f4a59a157.png?1584454852"
+                                    alt="icon">
+                            </div>
+                            <div class="content-container">
+                                <div class="content-text content-text">Fare &amp; Fuel Policy</div>
+                                <div class="content-sub-text">Fare is inclusive of all taxes. Kindly return the car at
+                                    the same fuel level as the trip start time</div>
+                                <div><a href="#"
+                                        target="_blank" class="card-hyperlink">See Details</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div class="checkout-card-container">
+                            <div class="icon"><img
+                                    src="https://zoomcar-assets.zoomcar.com/images/original/afb10552c79c652619a45d814ab9f936f8592037.png?1584454817"
+                                    alt="icon"></div>
+                            <div class="content-container">
+                                <div class="content-text content-text">Cancellation Policy</div>
+                                <div class="content-sub-text">Hassle free cancellations and refunds at nominal charges
+                                </div>
+                                <div><a href="#"
+                                        target="_blank" class="card-hyperlink">See Details</a></div>
+                            </div>
+    
+                        </div>
+    
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div class="checkout-card-container">
+                            <div class="icon"><img
+                                    src="https://zoomcar-assets.zoomcar.com/images/original/9f2143a815aa6de62a72bcc66fa2739162e52fdc.png?1638375860"
+                                    alt="icon"></div>
+                            <div class="content-container">
+                                <div class="content-text content-text">Agreement Policy</div>
+                                <div class="content-sub-text">I hereby agree to the terms and conditions of the Lease
+                                    Agreement with Host</div>
+    
+                                <div><a href="#" target="_blank"
+                                        class="card-hyperlink">See Details</a></div>
+                            </div>
+                            <label class="checkbox-container"><input type="checkbox">
+                                <div id="LEASE_AGREEMENT" class="control-indicator"></div>
+                            </label>
+    
+                        </div>
+    
+                    </div>
+                </div>
+            </div></div>
+       
 
     </div>
+
+    </div>
+    <div class="payment-details">
+        <div class="price-coupon-container">
+            <div class="price-container">
+                <div id="carprice" class="final-price">
+                    ₹2,536
+                </div>
+            </div>
+            <div class="coupon-container">
+                <div class="view-promo d-f"><i class="z-coupon"></i>
+                    <div class=""><a id="button" href="#" class="view-offer">Apply Coupon</a></div>
+
+                </div>
+            </div>
+        </div>
+
+        <div><button class="payment-action">
+                Checkout Summary
+            </button></div>
+    </div>
+
+    <div class="bg-modal">
+        <div class="modal-contend">
+            <div class="close">
+                +
+            </div>
+            <img src="zoom logo.png" alt="" width="100px">
+
+            <input id="coupon" type="text" placeholder="Enter Coupon Code">
+            <button id="applybtn">Apply Coupon</button>
+            <p id="invalid" style="color: red;"></p>
+
+        </div>
+    </div>
 </body>
+
 </html>
 <script src="https://kit.fontawesome.com/3e4b21b9a4.js" crossorigin="anonymous"></script>
+
+<script>
+
+    var Checkout=JSON.parse(localStorage.getItem("carData"))||[];
+    console.log(Checkout)
+    document.getElementById("carImage").src=Checkout.image_url
+ 
+    document.getElementById("Carname").innerText=Checkout.name
+    document.getElementById("Carname1").innerText=Checkout.name
+    
+    document.getElementById("fuel").innerText=Checkout.fuel
+  document.getElementById("trans").innerText=Checkout.trans
+  document.getElementById("carprice").innerText="₹"+"  "+Checkout.price
+
+  var StartDate=localStorage.getItem("startDate")
+  var EndDate=localStorage.getItem("endDate")
+  document.getElementById("date").innerText=StartDate+"-------"+EndDate
+  document.getElementById("date1").innerText=StartDate
+  document.getElementById("date2").innerText=EndDate
+  console.log(StartDate)
+   
+
+  document.getElementById("button").addEventListener("click",function(){
+    document.querySelector(".bg-modal").style.display="flex"
+  })
+
+document.querySelector(".close").addEventListener("click",function(){
+    document.querySelector(".bg-modal").style.display="none"
+})
+
+document.querySelector("#applybtn").addEventListener("click",function(){
+
+    if(document.getElementById("coupon").value==""){
+
+    }else if(document.getElementById("coupon").value=="zoom10"){
+        document.querySelector(".bg-modal").style.display="none"
+    var discountPrice=Checkout.price
+    discountPrice=Number(discountPrice)-(Number(discountPrice)/10)
+    document.getElementById("carprice").innerText="₹"+"  "+discountPrice
+    }else{
+       
+        document.getElementById("invalid").innerText="Invalid Coupon"
+    }
+    
+
+})
+
+</script>
