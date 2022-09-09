@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment</title>
+    <style>
+        * {
+            margin: 0px;
+        }
+
+        #head {
+            width: 100%;
+            height: 55px;
+            background-color: black;
+        }
+
+        #arow {
+
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+
+        #arow>i {
+            font-size: 20px;
+            width: 100px;
+            color: white;
+        }
+
+        #pay {
+            height: 50px;
+
+        }
+
+        #pay>span {
+            color: white;
+            font-size: large;
+            font-family: "IBM Plex Sans";
+        }
+
+        #pay>p {
+            color: white;
+            font-family: "IBM Plex Sans";
+        }
+
+        header {
+            display: flex;
+        }
+
+        a {
+            color: white;
+        }
+
+        #firstchild {
+            width: 38%;
+            margin: auto;
+            /* border: 2px red solid; */
+            height: 100vh;
+            margin-top: 10px;
+
+        }
+
+        #child {
+            width: 100%;
+            height: 60px;
+            /* border: 1px green solid; */
+        }
+
+        #child:nth-child(1) {
+            display: flex;
+            align-items: center;
+            column-gap: 16px;
+            font-size: 30px;
+        }
+
+        #firstchild>#child {
+            display: flex;
+            align-items: center;
+            column-gap: 16px;
+            font-size: 30px;
+        }
+
+        img {
+            height: 40px;
+        }
+
+        #arow {
+            margin-top: 10px;
+        }
+
+        #pay {
+            margin-top: 10px;
+            /* margin-bottom: 18px; */
+        }
+
+        #bgmodal {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+
+            position: absolute;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            display: none;
+        }
+
+        #bgmodal2 {
+
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+
+            position: absolute;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            display: none;
+        }
+
+        #bgmodalpayment {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+
+            position: absolute;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            display: none;
+        }
+
+        .modalpayment {
+            width: 500px;
+            height: 390px;
+            background-color: white;
+            border-radius: 10px;
+
+            position: relative;
+        }
+
+        .modalpayment>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #bgmodal3 {
+
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+
+            position: absolute;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            display: none;
+        }
+
+        #bgmodal4 {
+
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+
+            position: absolute;
+            top: 0;
+            /* opacity: 0.7; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            display: none;
+        }
+
+
+        .modalcont3 {
+            width: 500px;
+            height: 390px;
+            background-color: white;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .modalcont4 {
+            width: 500px;
+            height: 390px;
+            background-color: white;
+            border-radius: 10px;
+            position: relative;
+        }
+
+
+        .modalcont2 {
+            width: 500px;
+            height: 390px;
+            background-color: white;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .modalcont {
+            width: 500px;
+            height: 390px;
+            background-color: white;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        #m1 {
+            width: 95%;
+            height: 55px;
+            /* border: 1px red solid; */
+            display: flex;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        #m2 {
+            width: 95%;
+            height: 55px;
+            border: 1px rgb(160, 152, 152) solid;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        #bb1 {
+            width: 95%;
+            height: 55px;
+            /* border: 1px red solid; */
+            display: flex;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+
+        #bbb1 {
+            width: 95%;
+            height: 55px;
+            /* border: 1px red solid; */
+            display: flex;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        #m3 {
+            width: 95%;
+            height: 55px;
+            border: 1px rgb(61, 56, 56) solid;
+            margin-top: 50px;
+            margin-left: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #m4 {
+            width: 95%;
+            height: 55px;
+            /* border: 1px red solid; */
+            margin-top: 50px;
+            margin-left: 10px;
+            border-radius: 5px;
+            background-color: rgb(224, 224, 224);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        input {
+            border-radius: 5px;
+            border: 5px;
+        }
+
+        #m2>input {
+            width: 98%;
+            height: 90%;
+            /* border: none; */
+            border-radius: 5px;
+        }
+
+        #m1child {
+            width: 13%;
+            height: 54px;
+            /* border: 1px greenyellow solid; */
+            /* float: right; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #img2 {
+            width: 13%;
+            height: 54px;
+            /* border: 1px greenyellow solid; */
+            /* float: right; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #t {
+            width: 87%;
+            height: 54px;
+            /* border: 1px rgb(134, 47, 255) solid; */
+            display: flex;
+            flex-direction: column;
+        }
+
+        #txt {
+            width: 87%;
+            height: 54px;
+            /* border: 1px rgb(134, 47, 255) solid; */
+            display: flex;
+            flex-direction: column;
+        }
+
+        #txt1 {
+            width: 87%;
+            height: 54px;
+            /* border: 1px rgb(134, 47, 255) solid; */
+            display: flex;
+            flex-direction: column;
+        }
+
+        #imgtxt {
+            width: 13%;
+            height: 54px;
+            /* border: 1px greenyellow solid; */
+            /* float: right; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .img {
+            width: 13%;
+            height: 54px;
+            /* border: 1px greenyellow solid; */
+            /* float: right; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #m2child {
+            width: 87%;
+            height: 54px;
+            /* border: 1px greenyellow solid; */
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; */
+            /* justify-content: center; */
+        }
+
+        #payimg {
+            /* width: 100%; */
+            /* height: 30px; */
+        }
+
+        .close {
+            position: absolute;
+            top: 0;
+            right: 1px;
+            font-size: 42px;
+            transform: rotate(45deg);
+            cursor: pointer;
+        }
+
+        .close1 {
+            position: absolute;
+            top: 0;
+            right: 1px;
+            font-size: 42px;
+            transform: rotate(45deg);
+            cursor: pointer;
+        }
+
+        .closepay {
+            position: absolute;
+            top: 0;
+            right: 1px;
+            font-size: 42px;
+            transform: rotate(45deg);
+            cursor: pointer;
+        }
+
+        .close3 {
+            position: absolute;
+            top: 0;
+            right: 1px;
+            font-size: 42px;
+            transform: rotate(45deg);
+            cursor: pointer;
+        }
+
+        .close4 {
+            position: absolute;
+            top: 0;
+            right: 1px;
+            font-size: 42px;
+            transform: rotate(45deg);
+            cursor: pointer;
+        }
+
+        #b1 {
+            width: 95%;
+            height: 55px;
+            /* border: 1px red solid; */
+            margin-top: 10px;
+            margin-left: 10px;
+            display: flex;
+        }
+
+        #b2 {
+            width: 95%;
+            height: 30px;
+            /* border: 1px red solid; */
+            margin-top: 10px;
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            background-color: rgb(224, 224, 224);
+        }
+
+        #b3 {
+            width: 95%;
+            height: 50px;
+            /* border: 1px red solid; */
+            margin-top: 10px;
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        #b4 {
+            width: 95%;
+            height: 50px;
+            /* border: 1px red solid; */
+            margin-top: 10px;
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        #b5 {
+            width: 95%;
+            height: 50px;
+            /* border: 1px red solid; */
+            margin-top: 10px;
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        #b6 {
+            width: 95%;
+            height: 50px;
+            /* border: 1px red solid; */
+            margin-top: 10px;
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        #bb2 {
+            width: 95%;
+            height: 55px;
+            /* border: 1px red solid; */
+            display: flex;
+            align-items: center;
+            column-gap: 20px;
+            margin-top: 10px;
+            margin-left: 10px;
+
+        }
+
+        #bbb2 {
+            width: 95%;
+            height: 55px;
+            /* border: 1px red solid; */
+            display: flex;
+            align-items: center;
+            /* column-gap: 20px; */
+            margin-top: 20px;
+            margin-left: 10px;
+            /* display: flex; */
+
+        }
+
+        #lat1 {
+            width: 90%;
+            height: 54px;
+            /* border: 1px rgb(38, 218, 32) solid; */
+        }
+
+        #lat1>input {
+            width: 100%;
+            height: 54px;
+        }
+
+
+        #lat2 {
+            width: 20%;
+            height: 54px;
+            /* border: 1px rgb(88, 32, 218) solid; */
+            background-color: rgb(16, 163, 16);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: large;
+            border-radius: 5px;
+        }
+
+        .tab1>i {
+            color: brown;
+        }
+
+        .tab2>i {
+            color: grey;
+        }
+
+        .tab3>i {
+            color: rgb(68, 68, 183);
+        }
+
+        .tab4>img {
+            /* background-color: orangered; */
+        }
+
+        hr {
+            color: rgb(104, 226, 43);
+            /* max-lines: 2px; */
+            size: 2px;
+        }
+
+        #firstchild {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            height: 300px;
+            /* width: 40%; */
+        }
+
+        #child {
+            margin-left: 15px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div> -->
+    <header id="head">
+        <div id="arow">
+            <a href="#">
+                <i class="fa-solid fa-arrow-left"></i></a>
+
+        </div>
+        <div id="pay">
+            <span>Pay INR :</span> <span id="topay">0</span>
+            <p>rough</p>
+        </div>
+
+    </header>
+    <div id="parentdiv">
+        <div id="firstchild">
+
+            <div id="child" class="tab1">
+                <i class="fa-solid fa-credit-card"></i>
+                <div>
+                    <p style="font-size: 16px;">Credit / Debit / ATM Card</p>
+                    <p style="font-size: 13px;">All major card providers are supported</p>
+                </div>
+            </div>
+            <hr />
+            <div id="child" class="tab2">
+                <i class="fa-solid fa-building-columns"></i>
+                <div>
+                    <p style="font-size: 16px;">Net Banking</p>
+                    <p style="font-size: 13px;">All major banks are supported</p>
+                </div>
+            </div>
+            <hr />
+            <div id="child" class="tab3">
+                <i class="fa-solid fa-wallet"></i>
+                <div>
+                    <p style="font-size: 16px;">Mobile Wallet</p>
+                    <p style="font-size: 13px;">Paytm Wallet + Postpaid</p>
+                </div>
+            </div>
+            <hr />
+            <div id="child" class="tab4">
+                <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/upi_logo_icon_170312.png" />
+                <div>
+                    <p style="font-size: 16px;">UPI</p>
+                    <p style="font-size: 13px;">Get ₹30 Instant Cashback on using any UPI payment</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- </div> -->
+    <div id="bgmodal">
+
+        <div class="modalcont">
+            <div class="close">+</div>
+
+            <div id="m1">
+                <div id="m2child">
+                    <p style="font-weight: bold;font-size: 20px;">Enter Card Details</p>
+                    <p>Amount:</p>
+                </div>
+
+                <div id="m1child">
+                    <img src="https://www.zoomcar.com/build/760ee3019ff287f2caed7e40c92b1ca5.png" alt="pay" id="payimg">
+                </div>
+            </div>
+            <div id="m2">
+                <input type="number" placeholder="  Card Number" />
+            </div>
+            <div id="m3">
+                <input placeholder="  Expire (MM/YY)">
+                <input placeholder="  CVV">
+            </div>
+            <a href="#">
+                <div id="m4">
+                    <p style="color: rgb(168,168,168);">PAY INR</p>
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+    <div id="bgmodal2">
+        <div class="modalcont2">
+            <div class="close1">+</div>
+            <div id="b1">
+                <div id="t">
+                    <p style="font-weight: bold;font-size: 20px;">Select Bank</p>
+                    <p>Amount:</p>
+                </div>
+                <div id="img2">
+                    <img src="https://www.zoomcar.com/build/760ee3019ff287f2caed7e40c92b1ca5.png" />
+                </div>
+            </div>
+
+            <div id="b2">
+                POPULAR BANKS
+            </div>
+
+            <div id="b3">
+                <img
+                    src="https://zoomcar-assets.zoomcar.com/images/original/27eac78721d3d14bc9df34231bce661e1d510e8f.png?1584602001" />
+                <p>State Bank Of India</p>
+            </div>
+
+            <hr />
+            <div id="b4">
+                <img
+                    src="https://zoomcar-assets.zoomcar.com/images/original/312f0e8f319287aa09b1e96b45a7d82cabf6184a.png?1584601979" />
+                <p>ICICI Netbanking</p>
+            </div>
+            <hr />
+            <div id="b5">
+                <img
+                    src="https://zoomcar-assets.zoomcar.com/images/original/f380ffaa7f80bdc586f469a53a3caea8887d84a4.png?1584601955" />
+                <p>HDFC BANK</p>
+            </div>
+            <hr />
+            <div id="b6">
+                <img
+                    src="https://zoomcar-assets.zoomcar.com/images/original/d79d466d40fc7df794e2e1c907db212e52d4f47f.png?1584601931" />
+                <p>Axis Bank</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="bgmodal3">
+        <div class="modalcont3">
+            <div class="close3">+</div>
+
+            <div id="bb1">
+                <div id="txt">
+                    <p style="font-weight: bold;font-size: 20px;">Enter Card Details</p>
+                    <p>Amount:</p>
+                </div>
+                <div class="img">
+                    <img src="https://www.zoomcar.com/build/760ee3019ff287f2caed7e40c92b1ca5.png" />
+                </div>
+            </div>
+
+            <div id="bb2">
+                <img
+                    src="https://img1.zoomcar.com/images/original/91871c2e202fd271724063a4a38033612d37c219.png?1584602070" />
+                <p>PayTm</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div id="bgmodal4">
+        <div class="modalcont4">
+            <div class="close4">+</div>
+
+            <div id="bbb1">
+
+                <div id="txt1">
+                    <p style="font-weight: bold;font-size: 20px;">Enter UPI ID</p>
+                    <p>Amount:</p>
+                </div>
+
+                <div id="imgtxt">
+                    <img src="https://www.zoomcar.com/build/760ee3019ff287f2caed7e40c92b1ca5.png" alt="pay" id="payimg">
+                </div>
+
+            </div>
+            <div id="bbb2">
+                <div id="lat1">
+                    <input type="text" id="in" placeholder=" Enter Upi Id" />
+                </div>
+                <div id="lat2">
+                    <a href="#">Verify</a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div id="bgmodalpayment">
+        <div class="modalpayment">
+            <div class="closepay">+</div>
+
+            <img src="https://www.beauty-addict.com/wp-content/uploads/2021/02/Payment-success.png" />
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script src="https://kit.fontawesome.com/fb8ecd1eb8.js" crossorigin="anonymous"></script>
+<script>
+    document.querySelector(".tab1").addEventListener("click", function () {
+        document.querySelector('#bgmodal').style.display = 'flex';
+    })
+
+
+    document.querySelector(".close").addEventListener("click", function () {
+        document.querySelector('#bgmodal').style.display = 'none';
+        // alert("hello");
+    })
+
+
+
+    document.querySelector(".tab2").addEventListener("click", function () {
+        document.querySelector('#bgmodal2').style.display = 'flex';
+    })
+
+
+    document.querySelector(".close1").addEventListener("click", function () {
+        document.querySelector('#bgmodal2').style.display = 'none';
+    })
+
+
+    document.querySelector(".tab3").addEventListener("click", function () {
+        document.querySelector('#bgmodal3').style.display = 'flex';
+    })
+
+
+    document.querySelector(".close3").addEventListener("click", function () {
+        document.querySelector('#bgmodal3').style.display = 'none';
+    })
+
+    document.querySelector(".tab4").addEventListener("click", function () {
+        document.querySelector('#bgmodal4').style.display = 'flex';
+    })
+
+
+    document.querySelector(".close4").addEventListener("click", function () {
+        document.querySelector('#bgmodal4').style.display = 'none';
+    })
+    // document.querySelector("#lat2").addEventListener("click", function () {
+    //     document.querySelector('#bgmodal4').style.display = 'none';
+    // })
+
+
+    document.querySelector("#lat2").addEventListener("click", function () {
+        var d = document.getElementById("in").value;
+        if (d == "") {
+            return;
+        } else {
+            document.querySelector('#bgmodalpayment').style.display = 'flex';
+            document.querySelector('#bgmodal4').style.display = 'none';
+        }
+
+    })
+
+
+    document.querySelector(".closepay").addEventListener("click", function () {
+
+
+        document.querySelector('#bgmodalpayment').style.display = 'none';
+    })
+
+
+
+
+</script>

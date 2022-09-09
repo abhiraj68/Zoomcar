@@ -223,14 +223,15 @@ function bagImg2() {
 }
 
 document.getElementById("tab3").addEventListener("click",findCar);
-
+var t =document.getElementById("tab3");
 function findCar(){
     if(document.getElementById("location").value==""){
 
     }
     else{
         localStorage.setItem("place",document.getElementById("location").value)
-        location.href="https://www.zoomcar.com/in/mumbai/search?lat=19.1843946&lng=73.0770397&starts=1662692400000&ends=1662721200000&type=round_trip";
+        location.href="https://fontawesome.com/icons/phone-volume?s=solid&f=classic";
+        t.style.backgroundColor="green";
     }
 
 }
