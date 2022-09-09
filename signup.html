@@ -58,7 +58,7 @@
             text-decoration: none;
             margin-left: 60px;
             box-shadow: rgba(146, 83, 83, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(23, 48, 28, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
-            background-color: #8cad8c;
+
             padding: 10px 20px;
             border-radius: 3px;
         }
@@ -79,42 +79,83 @@
         }
         .wrap>div
         {
-            box-shadow: rgba(146, 83, 83, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(23, 48, 28, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
+
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
             padding: 20px;
         }
-        .wrap>div div
+        #signup_logo
+        {
+            /* background-color: orange; */
+            display: flex;
+            flex-direction: column;
+            color: seagreen;
+            justify-content: space-around;
+            font-size: x-large;
+            align-items: center;
+
+        } #signup_logo img
+        {
+            /* background-color: seagreen; */
+            width: 180px;
+            height: 40px;
+            padding: 30px;
+
+        }
+        .wrap form div
         {
             display: flex;
-            padding: 5px 20px;
+            padding: 5px 20px ;
             color: black;
         }
         .wrap h1
         {
             font-size: medium;
             text-align: center;
+            color: #10A310;
+
         }
         .wrap form
         {
-            padding-top: 10%;
+            box-shadow: rgba(146, 83, 83, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(23, 48, 28, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
+            padding: 10px 50px 30px;
+            background-color: rgba(209, 208, 208, 0.793);
+            border-radius: 12px;
         }
         .wrap input
         {
-            padding: 15px 50px;
-        }
-        #signup_logo
-        {
-            background-color: lemonchiffon;
-            padding: 0% 17%;
-            margin-left: 1px;
+            padding: 10px 50px 6px 0px;
         }
         
-
-
-
-
+        #signup:hover
+        {
+            color: black;
+            background-color: seagreen;
+        }
+        #signup
+        {
+            color: #1f10a3;
+            padding: 10px 30px;
+            margin-left: 49px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: rgba(146, 83, 83, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(23, 48, 28, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;;
+        }
+        .signup:hover
+        {
+            color: black;
+            background-color: seagreen;
+        }
+        .signup
+        {
+            color: #1f10a3;
+            padding: 10px 30px;
+            margin-left: 49px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: rgba(146, 83, 83, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(23, 48, 28, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;;
+        }
       
         #login_Continue
         {
@@ -125,7 +166,10 @@
         #signup_form:target
         {
             visibility: visible;
-            background-color: antiquewhite;
+            background-image: url(https://cdn.pixabay.com/photo/2016/11/29/12/49/dark-1869611_960_720.jpg);
+            background-color: blueviolet;
+            background-size: cover;
+            /* background-position: 10%  0%; */
             opacity: 1;
 
         }
@@ -144,11 +188,11 @@
                 <form id="login_form">
                     <div>Enter your Email ID</div>
                     <div>
-                        <input id="login_email" type="email"   placeholder="Enter Email "   required>
+                        <input id="login_email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}"  placeholder="Enter Email " value=""  required>
                     </div>
                     <div>Password</div>
                     <div>
-                        <input id="login_password" class="pwd" name="password" type="password"   placeholder="Password"  required>
+                        <input id="login_password" class="pwd" name="password" type="password" minlength="8" pattern="[a-z0-9._%+-]{8,50}"  placeholder="Password" value="" required>
                     </div>
                     <div>
                         <input id="login" onclick="loginUser()" type="submit"  value="login">
@@ -156,8 +200,8 @@
                 </form>
                  
             </div>
-
-            <div ><a class="signup-link" href="#signup_form">Signup</a></div>
+            <h1>or Sign up Now!</h1>
+            <div ><a class="signup" href="#signup_form">Signup</a></div>
 
             
             <div class="social"><span>Continue via Social</span>
@@ -173,28 +217,30 @@
 
     <div class="wrap" id="signup_form">
         <div>
-            <div id="signup_logo"><h1>welcome to Zoomcar!</h1></div>
-            <form id="Signup_form"></form>
-                <div><h1>Enter Name as Your Driver's Lisence</h1></div>
+            <div id="signup_logo"><img src="https://www.zoomcar.com/images/zms-logo-white.png" alt="zoom logo"><div>Rental car services</div>
+            </div>
+            <form id="Signup_form">
+                <div><h1>Enter Details to signup</h1></div>
                 <div>
-                    <input id="signup_name" type="text"   placeholder="Name"   required>
+                    <input id="signup_name" type="text" name="name"  placeholder="Name(as in driver's licence)" maxlength="50"  required>
                 </div>
-                <div><h1>Enter Email</h1></div>
                 <div>
-                    <input id="signup_email"  type="text"   placeholder="Enter Email "  required>
+                    <input id="signup_email"  type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}"  placeholder="Enter Email " value="" required>
                 </div>
-                <div><h1>Password</h1></div>
+                <div><h1>Set Password</h1></div>
                 <div>
-                    <input class="pwd" id="signup_password"  type="password"   placeholder="Password"  required>
+                    <input class="pwd" id="signup_password"  type="password" pattern="[a-z0-9._%+-]{8,50}" minlength="8" placeholder="Password" value="" required>
                 </div>
-                <div><h1>Confirm Password</h1></div>
+
                 <div>
-                    <input  class="pwd" id="signup_confirmpwd"  type="password"   placeholder="Password"  required>
+                    <input  class="pwd" id="signup_confirmpwd"  type="password" pattern="[a-z0-9._%+-]{8,50}" minlength="8" placeholder="Confirm Password" value="" required>
                 </div>
 
                 <div>
                     <input id="signup"  onclick="signupUser()" type="submit"  value="Sign-up"  >
                 </div>
+            </form>
+                
 
         </div>
     </div>
@@ -231,6 +277,7 @@ event.preventDefault()
    })
    if(validUser)
    {
+    alert("Login Successful")
     window.location.href="index.html"
    }
    else if(userNotAllowed)

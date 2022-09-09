@@ -34,7 +34,8 @@ a {
 }
 
 h1 {
-    font-weight: bold;
+    font-weight: 700;
+;
 }
 
 #zoomlog {
@@ -221,23 +222,41 @@ header a {
 }
 
 #secondparentdiv {
-    width: 100%;
-    height: 100%;
+    /* width: 100%; */
+    /* height: 100%; */
     /* border: 3px chocolate solid; */
     display: flex;
-    justify-content: center;
-    column-gap: 44px;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-end;
     padding-top: 53px;
     padding-bottom: 53px;
 }
 
+#offer {
+    width: 350px;
+    /* border: 2px goldenrod solid; */
+    height: 280px;
 
+    margin-left: 20px;
+
+}
+
+#offer2 {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 #child {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    padding:30px;
     border: rgb(246, 247, 249) solid;
-    width: 38%;
-    height: 290px;
+    /* width: 38%;
+    height: 290px; */
     border-radius: 5px;
 }
 
@@ -308,23 +327,7 @@ h3+p {
     height: 150px;
 }
 
-#offer {
-    width: 60%;
-    /* border: 2px goldenrod solid; */
-    height: 280px;
 
-    margin-left: 20px;
-
-}
-
-#offer2 {
-    width: 40%;
-    /* border: 2px goldenrod solid; */
-    height: 280px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 #child {
     display: flex;
@@ -382,6 +385,9 @@ h3+p {
     #tab3 {
         width: 60%;
     }
+    #host div {
+        display: none;
+    }
 }
 
 @media screen and (max-width:700px) {
@@ -391,6 +397,10 @@ h3+p {
     #tab3 {
         width: 80%;
     }
+    #host div {
+        display: none;
+    }
+    
 }
 
 #tab2 input{
@@ -461,4 +471,30 @@ padding-left: 10px;
 nav{
     font-size: 30px;
 }
+@media screen and (width<980px) {
 
+    nav img{
+        background-color: #cb825d00;
+        color: rgba(0, 0, 255, 0);
+    }
+    nav ul{
+        background-color: #cb825d00;
+        color: rgba(0, 0, 255, 0);
+    }
+    nav li{
+        background-color: #cb825d00;
+        color: rgba(0, 0, 255, 0);
+    }
+    nav div{
+        background-color: #cb825d00;
+        color: rgba(0, 0, 255, 0);
+    }
+    nav span{
+        background-color: #cb825d00;
+        color: rgba(0, 0, 255, 0);
+    }
+    nav a{
+        background-color: #cb825d00;
+        color: rgba(0, 0, 255, 0);
+    }
+}
