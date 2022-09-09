@@ -566,13 +566,13 @@
     <!-- <div> -->
     <header id="head">
         <div id="arow">
-            <a href="#">
+            <a href="checkoutPage.html">
                 <i class="fa-solid fa-arrow-left"></i></a>
 
         </div>
         <div id="pay">
-            <span>Pay INR :</span> <span id="topay">0</span>
-            <p>rough</p>
+            <span>Pay INR :</span> <span id="topay"> </span>
+            <p id="todate"></p>
         </div>
 
     </header>
@@ -623,7 +623,7 @@
             <div id="m1">
                 <div id="m2child">
                     <p style="font-weight: bold;font-size: 20px;">Enter Card Details</p>
-                    <p>Amount:</p>
+                    <p>Amount: <span id="amount1"></span></p>
                 </div>
 
                 <div id="m1child">
@@ -652,7 +652,7 @@
             <div id="b1">
                 <div id="t">
                     <p style="font-weight: bold;font-size: 20px;">Select Bank</p>
-                    <p>Amount:</p>
+                    <p>Amount:<span id="amount2"></span></p>
                 </div>
                 <div id="img2">
                     <img src="https://www.zoomcar.com/build/760ee3019ff287f2caed7e40c92b1ca5.png" />
@@ -700,7 +700,7 @@
             <div id="bb1">
                 <div id="txt">
                     <p style="font-weight: bold;font-size: 20px;">Enter Card Details</p>
-                    <p>Amount:</p>
+                    <p>Amount:<span id="amount3"></span></p>
                 </div>
                 <div class="img">
                     <img src="https://www.zoomcar.com/build/760ee3019ff287f2caed7e40c92b1ca5.png" />
@@ -726,7 +726,7 @@
 
                 <div id="txt1">
                     <p style="font-weight: bold;font-size: 20px;">Enter UPI ID</p>
-                    <p>Amount:</p>
+                    <p>Amount:<span id="amount4"></span></p>
                 </div>
 
                 <div id="imgtxt">
@@ -819,9 +819,14 @@
 
 
         document.querySelector('#bgmodalpayment').style.display = 'none';
+        window.location.href="index.html"
     })
 
 
-
-
+    document.getElementById("topay").innerText=localStorage.getItem("carprice")
+    document.getElementById("todate").innerText=localStorage.getItem("startDate")+">"+localStorage.getItem("endDate")
+    var element=document.getElementById("amount1").innerText=localStorage.getItem("carprice")
+    var element=document.getElementById("amount2").innerText=localStorage.getItem("carprice")
+    var element=document.getElementById("amount3").innerText=localStorage.getItem("carprice")
+    var element=document.getElementById("amount4").innerText=localStorage.getItem("carprice")
 </script>

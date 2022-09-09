@@ -526,6 +526,9 @@
     letter-spacing: 0.8px;
     border: none;
 }
+.checkout{
+    text-decoration: none;
+}
 
     </style>
 </head>
@@ -833,15 +836,15 @@
             </div>
             <div class="coupon-container">
                 <div class="view-promo d-f"><i class="z-coupon"></i>
-                    <div class=""><a id="button" href="#" class="view-offer">Apply Coupon</a></div>
+                    <div class=""><a id="button"  class="view-offer">Apply Coupon</a></div>
 
                 </div>
             </div>
         </div>
 
-        <div><button class="payment-action">
-                Checkout Summary
-            </button></div>
+        <div><a href="payment.html" class="checkout"><button  class="payment-action">
+            Checkout Summary
+        </button></a> </div>
     </div>
 
     <div class="bg-modal">
@@ -877,12 +880,12 @@
 
   var StartDate=localStorage.getItem("startDate")
   var EndDate=localStorage.getItem("endDate")
-  document.getElementById("date").innerText=StartDate+"-------"+EndDate
+  document.getElementById("date").innerText=StartDate+">"+EndDate
   document.getElementById("date1").innerText=StartDate
   document.getElementById("date2").innerText=EndDate
   console.log(StartDate)
    
-
+  localStorage.setItem("carprice",Checkout.price)
   document.getElementById("button").addEventListener("click",function(){
     document.querySelector(".bg-modal").style.display="flex"
   })
@@ -900,6 +903,7 @@ document.querySelector("#applybtn").addEventListener("click",function(){
     var discountPrice=Checkout.price
     discountPrice=Number(discountPrice)-(Number(discountPrice)/10)
     document.getElementById("carprice").innerText="₹"+"  "+discountPrice
+    localStorage.setItem("carprice",discountPrice)
     }else{
        
         document.getElementById("invalid").innerText="Invalid Coupon"
@@ -907,5 +911,7 @@ document.querySelector("#applybtn").addEventListener("click",function(){
     
 
 })
+
+
 
 </script>

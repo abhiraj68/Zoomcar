@@ -101,10 +101,163 @@
   background-color: #ccc; 
 }
 #b4 > div > h2{
-    margin-bottom: 20px;
+    margin-bottom: 20px;}
+    * {
+   
+   margin: 0px;
+}
+a{
+   color: black;
+}
+
+header {
+   margin-top: 0px;
+   border: 2px solid black;
+   height: 75px;
+   background-color: black;
+   position: sticky;
+   top: 0px;
+   left: 0px;
+   z-index: 15;
+}
+
+#bar {
+   padding-top: 20px;
+   padding-left: 5px;
+
+   padding-right: 10px;
+}
+
+i {
+   color: aliceblue;
+
+}
+
+a {
+   text-decoration: none;
+}
+
+h1 {
+   font-weight: bold;
+}
+
+#zoomlog {
+   padding-top: 13px;
+
+}
+
+.parentdiv {
+   display: flex;
+}
+
+nav {
+
+   width: 100%;
+
+   padding: 10px;
+}
+
+nav ul {
+   float: right;
+}
+
+nav li {
+   display: inline-block;
+   list-style: none;
+   /* padding-top: 10px; */
+}
+
+
+
+header a {
+   padding: 0 40px;
+   text-decoration: none;
+   color: aliceblue;
+   font-size: 25px;
+   /* font-weight: bold; */
+}
+
+
+#host div {
+   background-color: white;
+   display: flex;
+   align-items: center;
+   border-radius: 40px;
+   padding: 10px;
+}
+
+#location{
+   
+}
+
+
+
+#host a {
+   text-decoration: none;
+   display: flex;
+   justify-content: space-around;
+
+}
+
+#host span {
+   color: black;
+
+   font-size: 20px;
+}
+
+#host a {
+   padding: 0px;
+}
+
     </style>
 </head>
 <body>
+    <header>
+
+<div class="parentdiv">
+    <a href="#">
+        <p id="bar">
+            <i class="fa-solid fa-bars"></i>
+        </p>
+    </a>
+    <div id="zoomlog">
+        <a href="index.html">
+            <img src="https://www.zoomcar.com/build/98e56e8b0b91e8806885a22ac2bf69a7.png" />
+
+        </a>
+    </div>
+    <nav>
+
+        <ul>
+
+
+
+            <li id="host">
+
+
+                <div>
+                    <a href="partnerPage.html">
+                        <img src="https://www.zoomcar.com/build/e222e7ff96ffdd76290118718d52d71f.svg" />
+                        <span>Become a host</span>
+                    </a>
+                </div>
+                <!-- </a> -->
+            </li>
+
+
+            <li><a style="font-family: 'Anton', sans-serif ;font-weight: bold;" href="ZMS.html">
+                    ZMS
+                </a> </li>
+            <li><a id="loginName" style="font-family: 'Anton', sans-serif ;font-weight: bold;" href="signup.html">
+                    LOGIN/SIGNUP
+                </a> </li>
+
+        </ul>
+    </nav>
+
+</div>
+
+</header>
     <div id ="b1">
         <div id="b2">
         <div>
@@ -214,4 +367,9 @@ for (var i = 0; i < act.length; i++) {
     }
   });
 }
+
+</script>
+<script src=" https://kit.fontawesome.com/fb8ecd1eb8.js" crossorigin="anonymous"></script>
+<script>
+    document.getElementById("loginName").innerText=localStorage.getItem("loginName")
 </script>

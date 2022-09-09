@@ -5,10 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Policies</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
 </head>
 <body>
-    <h1>POLICIES</h1>
+    <header>
+
+        <div class="parentdiv">
+            <a href="#">
+                <p id="bar">
+                    <i class="fa-solid fa-bars"></i>
+                </p>
+            </a>
+            <div id="zoomlog">
+                <a href="/index.html">
+                    <img src="https://www.zoomcar.com/build/98e56e8b0b91e8806885a22ac2bf69a7.png" />
+
+                </a>
+            </div>
+            <nav>
+
+                <ul>
+
+
+
+                    <li id="host">
+
+
+                        <div>
+                            <a href="partnerPage.html">
+                                <img src="https://www.zoomcar.com/build/e222e7ff96ffdd76290118718d52d71f.svg" />
+                                <span>Become a host</span>
+                            </a>
+                        </div>
+                        <!-- </a> -->
+                    </li>
+
+
+                    <li><a style="font-family: 'Anton', sans-serif ;font-weight: bold;" href="ZMS.html">
+                            ZMS
+                        </a> </li>
+                    <li><a id="loginName" style="font-family: 'Anton', sans-serif ;font-weight: bold;" href="signup.html">
+                            LOGIN/SIGNUP
+                        </a> </li>
+
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+    <div>
+        <h1>POLICIES</h1>
     <hr>
     <div id="head1">
         <h4>Fee Policy: Host Fee Policy</h4>
@@ -87,5 +134,10 @@
         <h3>GENERAL</h3>
         <p>Nothing contained in this Agreement and/or General Policies shall be construed as creating any agency, partnership, or other form of joint enterprise between Zoomcar and the users.
            If you have any questions regarding this Agreement, please email us at <a href="Host.support.in@zoomcar.com">Support@Zoom.</a></p>
+    </div>
+    
 </body>
 </html>
+<script>
+    document.getElementById("loginName").innerText=localStorage.getItem("loginName")
+</script>
