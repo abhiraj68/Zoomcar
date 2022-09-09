@@ -201,3 +201,17 @@
     </div>
 </body>
 </html>
+<script>
+var act = document.getElementsByClassName("b1");
+for (var i = 0; i < act.length; i++) {
+  act[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
