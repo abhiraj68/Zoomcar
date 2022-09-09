@@ -1,0 +1,285 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1
+        {
+            color: black;
+            font-size: x-large;
+        }
+        #zc_login
+        {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            display: flex;
+            justify-content: center;
+            line-height: 40px;
+            border-radius: 10px;   
+        }       
+        #login_form
+        {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: large;
+            font-weight: 500;
+            color: #10A310;
+        }
+        .login_flex
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .login_flex input
+        {
+            border-radius: 5px;
+            padding: 8px 28px;
+            
+        }
+        .social 
+        {
+            display: flex;
+            align-items: center;
+        }
+        #login
+        {
+            margin: 10px 0px 20px 0px;
+
+        }
+        #login:hover
+        {
+            background-color:lightgreen;
+        }
+        .signup-link
+        {
+            text-decoration: none;
+            margin-left: 60px;
+            box-shadow: rgba(146, 83, 83, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(23, 48, 28, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
+            background-color: #8cad8c;
+            padding: 10px 20px;
+            border-radius: 3px;
+        }
+        
+              /* forms */
+
+              .wrap
+        {
+            
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            visibility: hidden;
+            position: fixed;
+            top: 0;
+            
+        }
+        .wrap>div
+        {
+            box-shadow: rgba(146, 83, 83, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(23, 48, 28, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px;
+        }
+        .wrap>div div
+        {
+            display: flex;
+            padding: 5px 20px;
+            color: black;
+        }
+        .wrap h1
+        {
+            font-size: medium;
+            text-align: center;
+        }
+        .wrap form
+        {
+            padding-top: 10%;
+        }
+        .wrap input
+        {
+            padding: 15px 50px;
+        }
+        #signup_logo
+        {
+            background-color: lemonchiffon;
+            padding: 0% 17%;
+            margin-left: 1px;
+        }
+        
+
+
+
+
+      
+        #login_Continue
+        {
+            top: 100% ;
+
+            background-color: #10A310;
+        }
+        #signup_form:target
+        {
+            visibility: visible;
+            background-color: antiquewhite;
+            opacity: 1;
+
+        }
+        
+
+        </style>
+</head>
+<body>
+    <div id="zc_login">
+
+        <div>
+            <img id="login_car" src="https://www.zoomcar.com/build/fb65fcc43b8bededb813e093ea2d47d3.svg" alt="loginlogo">
+            <h1>Enter details to login</h1>
+
+            <div class="login_flex">
+                <form id="login_form">
+                    <div>Enter your Email ID</div>
+                    <div>
+                        <input id="login_email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}"  placeholder="Enter Email " value=""  required>
+                    </div>
+                    <div>Password</div>
+                    <div>
+                        <input id="login_password" class="pwd" name="password" type="password" minlength="8" pattern="[a-z0-9._%+-]{8,50}"  placeholder="Password" value="" required>
+                    </div>
+                    <div>
+                        <input id="login" onclick="loginUser()" type="submit"  value="login">
+                    </div>
+                </form>
+                 
+            </div>
+
+            <div ><a class="signup-link" href="#signup_form">Signup</a></div>
+
+            
+            <div class="social"><span>Continue via Social</span>
+                <img src="https://www.zoomcar.com/build/279de03b0c8ecdb4db56a79da6e775e6.svg" alt="g_logo">
+                <img src="https://www.zoomcar.com/build/62ba375ec1a9fbcbee9e9099181c8d38.svg" alt="fb_logo">
+            </div>
+
+        </div>
+    </div>
+        
+                                               <!-- FORMS LOGIN -->
+
+
+    <div class="wrap" id="signup_form">
+        <div>
+            <div id="signup_logo"><h1>welcome to Zoomcar!</h1></div>
+            <form id="Signup_form"></form>
+                <div><h1>Enter Name as Your Driver's Lisence</h1></div>
+                <div>
+                    <input id="signup_name" type="text" name="name"  placeholder="Name" maxlength="50"  required>
+                </div>
+                <div><h1>Enter Email</h1></div>
+                <div>
+                    <input id="signup_email"  type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}"  placeholder="Enter Email " value="" required>
+                </div>
+                <div><h1>Password</h1></div>
+                <div>
+                    <input class="pwd" id="signup_password"  type="password" pattern="[a-z0-9._%+-]{8,50}" minlength="8" placeholder="Password" value="" required>
+                </div>
+                <div><h1>Confirm Password</h1></div>
+                <div>
+                    <input  class="pwd" id="signup_confirmpwd"  type="password" pattern="[a-z0-9._%+-]{8,50}" minlength="8" placeholder="Password" value="" required>
+                </div>
+
+                <div>
+                    <input id="signup"  onclick="signupUser()" type="submit"  value="Sign-up"  >
+                </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
+<script>
+
+let userdata=JSON.parse(localStorage.getItem("userdata")) || [];
+
+function loginUser(){
+
+    
+
+    let mail = document.getElementById("login_email").value;
+    let pwd = document.getElementById("login_password").value;
+    let validUser = false;
+    let userNotAllowed= false;
+
+    userdata.forEach(function(ele){
+    if(ele.email==mail && ele.password==pwd){
+      validUser= true;
+    let currentUser=ele.name;
+    localStorage.setItem("currentUser");
+    }
+     else if (ele.email==mail){
+        userNotAllowed=true
+        return
+      }
+    
+   })
+   if(validUser)
+   {
+    window.location.href="https://www.youtube.com/"
+   }
+   else if(userNotAllowed)
+   {
+    alert("Wrong Password");
+   }
+   else
+   {
+    alert("user dosent exist");
+   }
+
+}
+
+
+
+                                            //    Signup Forms
+
+
+     function signupUser(){
+        
+
+    let   name = document.getElementById("signup_name").value;
+    let   email = document.getElementById("signup_email").value;
+    let   password = document.getElementById("signup_password").value;
+        
+    let obj={
+
+           name : name,
+           email : email,
+           password : password
+        };
+           
+        let confirmpwd = document.getElementById("signup_confirmpwd").value;
+        
+        userdata.forEach(function(elm){
+            if(elm.email==email){
+                alert("user already exist")
+                window.location.href="#";
+            }
+        })
+        
+       if (obj.password == confirmpwd)
+        {
+            userdata.push(obj)
+            localStorage.setItem(JSON.stringify("userdata"))
+            window.location.href="https://course.masaischool.com/lectures/35387"
+        }
+        else {
+            alert("Incorrect Password ");
+        }
+        
+        
+    }
+
+</script>
