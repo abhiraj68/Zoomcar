@@ -228,17 +228,53 @@ header a {
     margin-top: 20px;
     margin-bottom: 30px;
 }
-#twobox{
+.twobox{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     font-family: 'Anton', sans-serif;
     font-weight: bold;
     color: #1f1f1f;
+    
+}
+#place{
+    text-align: center;
+    color: grey;
+    border-bottom: 2px solid grey;
+    font-size: 20px;
+}
+.lock{
+    font-size: 20px;
 }
 .date{
    text-align: center;
    width: 134px;
+}
+@media all and (min-width: 401px) and (max-width: 800px){
+    .page-search {
+        display: block;
+        
+    }
+    .sort-container {
+        display: flex;
+    background-color: white;
+    padding: 25px 54px;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0px 0px 1px 1px #e0e0e0;
+    
+    font-size: 12px;}
+    .options {
+    padding: 2px;
+    margin: 14px;
+    
+    }
+    
+}
+
+
+@media all and (min-width: 100px) and (max-width: 400px){
+
 }
     </style>
 </head>
@@ -251,8 +287,8 @@ header a {
                     <i class="fa-solid fa-bars"></i>
                 </p>
             </a>
-            <div id="zoomlog">
-                <img src="https://www.zoomcar.com/build/98e56e8b0b91e8806885a22ac2bf69a7.png" />
+            <div id="zoomlog" >
+               <a href="index.html"><img  src="https://www.zoomcar.com/build/98e56e8b0b91e8806885a22ac2bf69a7.png" /></a> 
             </div>
             <nav>
                 <!-- <div>
@@ -276,10 +312,10 @@ header a {
                     </li>
 
 
-                    <li><a style="font-family: 'Anton', sans-serif ;font-weight: bold;" href="#">
+                    <li><a style="font-family: 'Anton', sans-serif ;font-weight: bold;" href="ZMS.html">
                             ZMS
                         </a> </li>
-                    <li><a style="font-family: 'Anton', sans-serif ;font-weight: bold;" href="#" id="loginName">
+                    <li><a style="font-family: 'Anton', sans-serif ;font-weight: bold;" href="signup.html" id="loginName">
                             Login/Signup
                         </a> </li>
 
@@ -327,9 +363,9 @@ header a {
             <div class="page-search-right">
                 <div class="boxupper">
                     <div class="twobox">
-
+                       <span class="lock">Location</span> <p id="place"> </p>
                     </div>
-                    <div class="twobox" id="twobox">
+                    <div class="twobox" >
                        <div>
                         <h1>Start Date</h1>
                         <input type="date" class="date" id="startDate" onchange="changeStartDate()" >
@@ -599,6 +635,8 @@ displayData(carData)
   function addToCartPage(carData){
     localStorage.setItem("carData",JSON.stringify(carData))
   }
- 
+  document.getElementById("loginName").innerText=localStorage.getItem("loginName")
   
+  document.getElementById("place").innerText=localStorage.getItem("place")
 </script>
+<script src=" https://kit.fontawesome.com/fb8ecd1eb8.js" crossorigin="anonymous"></script>

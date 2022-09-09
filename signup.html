@@ -144,11 +144,11 @@
                 <form id="login_form">
                     <div>Enter your Email ID</div>
                     <div>
-                        <input id="login_email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}"  placeholder="Enter Email " value=""  required>
+                        <input id="login_email" type="email"   placeholder="Enter Email "   required>
                     </div>
                     <div>Password</div>
                     <div>
-                        <input id="login_password" class="pwd" name="password" type="password" minlength="8" pattern="[a-z0-9._%+-]{8,50}"  placeholder="Password" value="" required>
+                        <input id="login_password" class="pwd" name="password" type="password"   placeholder="Password"  required>
                     </div>
                     <div>
                         <input id="login" onclick="loginUser()" type="submit"  value="login">
@@ -177,19 +177,19 @@
             <form id="Signup_form"></form>
                 <div><h1>Enter Name as Your Driver's Lisence</h1></div>
                 <div>
-                    <input id="signup_name" type="text" name="name"  placeholder="Name" maxlength="50"  required>
+                    <input id="signup_name" type="text"   placeholder="Name"   required>
                 </div>
                 <div><h1>Enter Email</h1></div>
                 <div>
-                    <input id="signup_email"  type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}"  placeholder="Enter Email " value="" required>
+                    <input id="signup_email"  type="text"   placeholder="Enter Email "  required>
                 </div>
                 <div><h1>Password</h1></div>
                 <div>
-                    <input class="pwd" id="signup_password"  type="password" pattern="[a-z0-9._%+-]{8,50}" minlength="8" placeholder="Password" value="" required>
+                    <input class="pwd" id="signup_password"  type="password"   placeholder="Password"  required>
                 </div>
                 <div><h1>Confirm Password</h1></div>
                 <div>
-                    <input  class="pwd" id="signup_confirmpwd"  type="password" pattern="[a-z0-9._%+-]{8,50}" minlength="8" placeholder="Password" value="" required>
+                    <input  class="pwd" id="signup_confirmpwd"  type="password"   placeholder="Password"  required>
                 </div>
 
                 <div>
@@ -206,19 +206,22 @@
 let userdata=JSON.parse(localStorage.getItem("userdata")) || [];
 
 function loginUser(){
-
+event.preventDefault()
     
 
     let mail = document.getElementById("login_email").value;
     let pwd = document.getElementById("login_password").value;
+    
     let validUser = false;
     let userNotAllowed= false;
 
     userdata.forEach(function(ele){
     if(ele.email==mail && ele.password==pwd){
+        console.log(ele.email,ele.password)
       validUser= true;
     let currentUser=ele.name;
-    localStorage.setItem("currentUser");
+    localStorage.setItem("loginName",currentUser);
+    
     }
      else if (ele.email==mail){
         userNotAllowed=true
@@ -228,7 +231,7 @@ function loginUser(){
    })
    if(validUser)
    {
-    window.location.href="https://www.youtube.com/"
+    window.location.href="index.html"
    }
    else if(userNotAllowed)
    {
@@ -272,8 +275,8 @@ function loginUser(){
        if (obj.password == confirmpwd)
         {
             userdata.push(obj)
-            localStorage.setItem(JSON.stringify("userdata"))
-            window.location.href="https://course.masaischool.com/lectures/35387"
+            localStorage.setItem("userdata",JSON.stringify(userdata))
+            window.location.href="#"
         }
         else {
             alert("Incorrect Password ");

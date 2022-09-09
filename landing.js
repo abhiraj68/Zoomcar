@@ -89,7 +89,7 @@ function barfun2() {
     var div = document.createElement("div");
 
     var a1 =document.createElement("a");
-    a1.setAttribute("href","#");
+    a1.setAttribute("href","signup.html");
     var childdiv1 =document.createElement("div");
 
     childdiv1.setAttribute("class","childdiv1");
@@ -102,8 +102,8 @@ function barfun2() {
 
     a1.append(childdiv1);
     a1.setAttribute("class","menuSection");
+  
     
-
     var a2 =document.createElement("a");
     a2.setAttribute("href","#");
     var childdiv2 =document.createElement("div");
@@ -118,7 +118,7 @@ function barfun2() {
 
     
     var a3 =document.createElement("a");
-    a3.setAttribute("href","#");
+    a3.setAttribute("href","partnerPage.html");
     var childdiv3 =document.createElement("div");
     var i3 = document.createElement("div");
     i3.setAttribute("class","zoomm");
@@ -136,7 +136,7 @@ function barfun2() {
    
     
     var a4 =document.createElement("a");
-    a4.setAttribute("href","#");
+    a4.setAttribute("href","indexp1.html");
     var childdiv4 =document.createElement("div");
     var i4 = document.createElement("div");
     var h4 = document.createElement("p");
@@ -147,7 +147,7 @@ function barfun2() {
     a4.setAttribute("class","menuSection");
     
     var a5 =document.createElement("a");
-    a5.setAttribute("href","#");
+    a5.setAttribute("href","indexp2.html");
     var childdiv5 =document.createElement("div");
     var i5 = document.createElement("div");
     var h5 = document.createElement("p");
@@ -160,7 +160,7 @@ function barfun2() {
    
     
     var a6 =document.createElement("a");
-    a6.setAttribute("href","#");
+    a6.setAttribute("href","Help.html");
     var childdiv6 =document.createElement("div");
     var i6 = document.createElement("div");
     var h6 = document.createElement("p");
@@ -226,13 +226,15 @@ document.getElementById("tab3").addEventListener("click",findCar);
 var t =document.getElementById("tab3");
 function findCar(){
     if(document.getElementById("location").value==""){
-
+        
     }
     else{
         localStorage.setItem("place",document.getElementById("location").value)
-        location.href="https://fontawesome.com/icons/phone-volume?s=solid&f=classic";
+        location.href="carPage.html";
         t.style.backgroundColor="green";
     }
 
 }
+document.getElementById("loginName").innerText=localStorage.getItem("loginName")
+
 

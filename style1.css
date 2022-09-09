@@ -1,0 +1,135 @@
+body >div{
+    color: #666;
+    width: 60%;
+    margin-left: 20%;
+    line-height: 25px;
+    font-size: 14px;
+}
+h1 {
+    text-align: center;
+}
+#head1 > h2 {
+    color: rgb(97, 157, 37);
+}
+#head1 > h3 {
+    font-weight: 900;
+}
+#head1 {
+    display: flex;
+    justify-content: space-around;
+    color: black;
+}
+table {
+    border-collapse: collapse;
+    text-align: left;
+}
+td {
+    padding-left: 15px;
+    justify-content: space-around;
+}
+* {
+   
+    margin: 0px;
+}
+a{
+    color: black;
+}
+
+header {
+    margin-top: 0px;
+    border: 2px solid black;
+    height: 75px;
+    background-color: black;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 15;
+}
+
+#bar {
+    padding-top: 20px;
+    padding-left: 5px;
+
+    padding-right: 10px;
+}
+
+i {
+    color: aliceblue;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+#zoomlog {
+    padding-top: 13px;
+
+}
+
+.parentdiv {
+    display: flex;
+}
+
+nav {
+
+    width: 100%;
+
+    padding: 10px;
+}
+
+nav ul {
+    float: right;
+}
+
+nav li {
+    display: inline-block;
+    list-style: none;
+    /* padding-top: 10px; */
+}
+
+
+
+header a {
+    padding: 0 40px;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 25px;
+    /* font-weight: bold; */
+}
+
+
+#host div {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+#location{
+    
+}
+
+
+
+#host a {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#host span {
+    color: black;
+
+    font-size: 20px;
+}
+
+#host a {
+    padding: 0px;
+}
