@@ -235,6 +235,12 @@ function findCar(){
     }
 
 }
-document.getElementById("loginName").innerText=localStorage.getItem("loginName")
+
+if(localStorage.getItem("loginName")==null){
+    document.getElementById("loginName").innerText="LOGIN/SIGNUP"
+}else{
+    document.getElementById("loginName").innerText=localStorage.getItem("loginName")
+}
+
 
 
