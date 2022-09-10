@@ -631,17 +631,18 @@
                 </div>
             </div>
             <div id="m2">
-                <input  placeholder="  Card Number" maxlength="16" inputmode="numeric" />
+                <input  placeholder="  Card Number" maxlength="16" inputmode="numeric"  id="cardno"/>
             </div>
             <div id="m3">
-                <input placeholder="  Expire (MM/YY)" maxlength="4" inputmode="numeric" >
-                <input placeholder="  CVV" maxlength="3" inputmode="numeric"  type="password">
+                <input placeholder="  Expire (MM/YY)" maxlength="5" inputmode="numeric" id="exp" >
+                <input placeholder="  CVV" maxlength="3" inputmode="numeric"  type="password" id="cvv">
             </div>
             <a href="#">
                 <div id="m4">
                     <p style="color: rgb(168,168,168);">PAY INR</p>
                 </div>
             </a>
+            <p  id="invalidcard" style="color: red;text-align: center;"></p>
         </div>
 
     </div>
@@ -741,7 +742,9 @@
                 <div id="lat2">
                     <a href="#">Verify</a>
                 </div>
+                
             </div>
+            <p id="invalid" style="color: red;text-align: center;"></p>
 
 
         </div>
@@ -802,14 +805,32 @@
     //     document.querySelector('#bgmodal4').style.display = 'none';
     // })
 
+    document.querySelector("#m4").addEventListener("click", function () {
+        var cardno = document.getElementById("cardno").value;
+        var exp = document.getElementById("exp").value;
+        var cvv = document.getElementById("cvv").value;
+        if (cardno== ""||exp==""||cvv=="") {
+            
+        } else if(cardno=="1234123412341234"&&exp=="01/01"&&cvv=="111") {
+
+            document.querySelector('#bgmodalpayment').style.display = 'flex';
+            document.querySelector('#bgmodal').style.display = 'none';
+        }else{
+            document.getElementById("invalidcard").innerText="Invalid Card No"
+        }
+
+    })
 
     document.querySelector("#lat2").addEventListener("click", function () {
         var d = document.getElementById("in").value;
         if (d == "") {
-            return;
-        } else {
+            
+        } else if(d=="prachi@ybl") {
+
             document.querySelector('#bgmodalpayment').style.display = 'flex';
             document.querySelector('#bgmodal4').style.display = 'none';
+        }else{
+            document.getElementById("invalid").innerText="Invalid UPI"
         }
 
     })

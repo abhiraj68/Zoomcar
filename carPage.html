@@ -106,6 +106,7 @@ img{
     padding-right: 30px;
     border-color: #10a310;
     border-radius: 8px;
+    cursor: pointer;
 
 }
 .btn:hover{
@@ -137,6 +138,7 @@ header {
     top: 0px;
     left: 0px;
     z-index: 15;
+    
 }
 
 #bar {
@@ -258,7 +260,7 @@ header a {
     .sort-container {
         display: flex;
     background-color: white;
-    padding: 25px 54px;
+    padding: 25px 10px;
     border-radius: 4px;
     border: 1px solid #e0e0e0;
     box-shadow: 0px 0px 1px 1px #e0e0e0;
@@ -266,14 +268,120 @@ header a {
     font-size: 12px;}
     .options {
     padding: 2px;
-    margin: 14px;
+    margin: 2px;
     
     }
+    #tab,
+    #tab2,
+    #tab3 {
+        width: 60%;
+    }
+   nav {
+        display: none;
+        
+    }
+    .page-search__left {
+    display: block;
+    flex: 0 1 29%;
+    max-width: 90%;
+    margin: auto;
+
+}
+header{
+    width: 600px;
+}
+.boxupper {
+    display: flex;
+    /* grid-template-columns: repeat(2,1fr); */
+    gap: 43px;
+    justify-content: space-around;
+    align-items: center;
+
+    
+}
+.page-search .page-search-right>div {
+    margin-left: 117px;
+}
+.twobox {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-family: 'Anton', sans-serif;
+    font-weight: bold;
+    color: #1f1f1f;
+    font-size: 12px;
+    width: 172px;
+}
+.carbox{
+    flex-direction: column;
+}
     
 }
 
 
 @media all and (min-width: 100px) and (max-width: 400px){
+    header{
+    width: 900rpx;
+}
+    .page-search {
+        display: block;
+        
+    }
+    .sort-container {
+        display: flex;
+    background-color: white;
+    padding: 25px 10px;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0px 0px 1px 1px #e0e0e0;
+    flex-direction: column;
+    font-size: 12px;}
+    .options {
+    padding: 2px;
+    margin: 2px;
+    
+    }
+    #tab,
+    #tab2,
+    #tab3 {
+        width: 60%;
+    }
+   nav {
+        display: none;
+    }
+    .page-search__left {
+    display: block;
+    flex: 0 1 29%;
+    max-width: 90%;
+    margin: auto;
+
+}
+.boxupper {
+    display: flex;
+    /* grid-template-columns: repeat(2,1fr); */
+    gap: 43px;
+    justify-content: space-around;
+    align-items: center;
+
+    
+}
+.page-search .page-search-right>div {
+    margin-left: 117px;
+}
+.twobox {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-family: 'Anton', sans-serif;
+    font-weight: bold;
+    color: #1f1f1f;
+    font-size: 12px;
+    width: 172px;
+} 
+.carbox{
+    flex-direction: column;
+    width: 600px;
+}
 
 }
     </style>
