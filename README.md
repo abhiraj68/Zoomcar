@@ -22,7 +22,7 @@
 
 
  # ** Vikram Sharma **
- He is responsible for landing and payment page.
+ He is responsible for landing ,navbar and payment page.
 
  # ** Sanchit Jain **
  He is responsible for ZMS and Login Page.
